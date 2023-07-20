@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  /* Root Colors */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+/* Navbar Start */
+
+.navbar-toggler,
+.navbar-toggler:focus {
+  border: none;
+  outline: none;
+  transition: 0.3s transform ease-in-out;
+  box-shadow: none;
+}
+
+.navbar-toggler:active {
+  transform: scale(0.8);
+}
+
+.navbar-toggler span {
+  height: 2.2rem;
+  width: 2.2rem;
+}
+
+#navbarSupportedContent1 .navbar-nav.mr-auto .nav-item {
+  font-weight: 400;
+}
