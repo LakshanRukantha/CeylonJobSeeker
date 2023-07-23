@@ -11,8 +11,8 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./styles/main.css" />
-
-    <title>CeylonJobSeeker</title>
+    <link rel="stylesheet" href="./styles/admin-dashboard.css" />
+    <title>Dashboard</title>
   </head>
   <body>
     <div class="main-wrapper">
@@ -47,7 +47,7 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="categories.php">Categories</a>
+                <a class="nav-link" href="categories.html">Categories</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="faq.html">FAQ</a>
@@ -59,17 +59,88 @@
                 <a class="nav-link" href="about.html">About Us</a>
               </li>
             </ul>
-            <a href="./admin-login.html"
-              ><button class="btn-primary" type="button">
-                Login As Admin
-              </button></a
-            >
+            <button class="btn btn-light" type="button">Logout</button>
           </div>
         </div>
       </nav>
       <!-- Navbar End -->
-      <!-- Hero Section Start -->
-
+      <div class="container section-wrapper">
+        <h2 class="section-title">Post A New Job</h2>
+        <form class="form" action="">
+          <div class="mb-3">
+            <label for="jobTitle" class="form-label">Job Title</label>
+            <input
+              type="text"
+              class="form-control"
+              id="jobTitle"
+              placeholder="Enter Job Title"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="jobDescription" class="form-label"
+              >Job Description</label
+            >
+            <textarea
+              class="form-control"
+              id="jobDescription"
+              rows="3"
+              placeholder="Enter Job Description"
+            ></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="jobCategory" class="form-label">Job Category</label>
+            <select class="form-select" id="jobCategory">
+              <option selected>Select Job Category</option>
+              <option value="it">IT</option>
+              <option value="accounting">Accounting</option>
+              <option value="marketing">Marketing</option>
+              <option value="engineering">Engineering</option>
+              <option value="teaching">Teaching</option>
+              <option value="medical">Medical</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="jobLocation" class="form-label">Job Location</label>
+            <input
+              type="text"
+              class="form-control"
+              id="jobLocation"
+              placeholder="Enter Job Location"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="jobSalary" class="form-label">Job Salary</label>
+            <input
+              type="number"
+              class="form-control"
+              id="jobSalary"
+              placeholder="Enter Job Salary"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="jobType" class="form-label">Job Type</label>
+            <select class="form-select" id="jobType">
+              <option selected>Select Job Type</option>
+              <option value="1">Full Time</option>
+              <option value="2">Part Time</option>
+              <option value="3">Contract</option>
+              <option value="4">Internship</option>
+              <option value="5">Temporary</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="jobDeadline" class="form-label">Job Deadline</label>
+            <input
+              type="date"
+              class="form-control"
+              id="jobDeadline"
+              placeholder="Enter Job Deadline"
+            />
+          </div>
+          <button type="submit" class="btn-primary w-100">Submit</button>
+        </form>
+      </div>
       <!-- Footer Start -->
       <footer class="w-100">
         <div class="footer">
