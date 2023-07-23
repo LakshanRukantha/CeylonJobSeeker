@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/category.css"/>
     <title>CeylonJobSeeker</title>
   </head>
   <body>
@@ -33,7 +34,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="categories.php">Categories</a>
@@ -54,7 +55,46 @@
       </nav>
       <!-- Navbar End -->
       <!-- Hero Section Start -->
-
+      
+        <!-- cards section start -->
+        <div class="main">
+          <div class="card col-md-4 col-lg-12"> 
+            <div class="image">
+              <img src="assets\images\se.png" alt="Card image cap">
+            </div>
+            <div class="card-body" >
+              <h5 class="card-title"><b>Software Engineer</b></h5>
+              <p class="card-text">Lorem ipsum dolor sit amet dnhgrmn hmbvc v gnhgfmdf hgfdgvfdgf consectetur adipisicing elit. Sapiente aut, q?</p>
+              <div class="card-text">
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+              </div>
+              <br>
+              <a href="#" class="btn btn-primary">Explore jobs</a> 
+            </div>
+          </div>
+          <div class="card col-md-4 col-lg-12"> 
+            <div class="image">
+              <img src="assets\images\se.png" alt="Card image cap">
+            </div>
+            <div class="card-body" >
+              <h5 class="card-title"><b>Software Engineer</b></h5>
+              <p class="card-text">Lorem ipsum dolor sit amet dnhgrmn hmbvc v gnhgfmdf hgfdgvfdgf consectetur adipisicing elit. Sapiente aut, q?</p>
+              <div class="card-text">
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+              </div>
+              <br>
+              <a href="#" class="btn btn-primary">Explore jobs</a> 
+            </div>
+          </div>
+        </div>
+        <!-- cards section end -->
+        
       <!-- Footer Start -->
       <footer class="w-100">
         <div class="footer">
