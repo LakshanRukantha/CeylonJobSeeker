@@ -6,7 +6,7 @@
   flex-wrap: wrap;
   width: 100%;
   min-height: 80vh;
-  margin: 2rem auto;
+  margin-bottom: 2rem;
 }
 
 .faq-section-left {
@@ -16,6 +16,7 @@
   justify-content: center;
   flex: 1;
   height: 100%;
+  padding: 0 0.3rem;
   min-width: 350px;
   max-width: 500px;
 }
@@ -26,12 +27,14 @@
 
 .faq-section-right {
   flex: 1;
+  padding: 0 0.3rem;
   min-width: 350px;
   max-width: 500px;
 }
 
 .accordion-button {
-  background-color: var(--text-light-color);
+  background-color: var(--bg-light-blue);
+  margin: 0.2rem 0;
 }
 
 .accordion-button:focus {
