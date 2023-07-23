@@ -8,25 +8,30 @@ div .main {
   justify-content: space-between;
 }
 div .card {
-  max-width: 400px;
-  flex: 1 1 230px;
+  max-width: 300px;
+  flex: 1 1 210px;
+  min-height: 500px;
   max-height: 600px;
   border: 1px;
   margin: 20px;
+  
 }
-div .card .image {
-  height: 50%;
-  margin-bottom: 0%;
+div .card .icon { 
+  height: 30%;
   margin-top: 10px;
+  
 }
-div .card .image img {
+div .card .icon img {
+  
   width: 150px;
   height: 150px;
   object-fit: cover;
   border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 div .card .card-body {
-  margin-top: 0%;
   object-fit: cover;
 }
 div .card .card-title {
@@ -34,12 +39,16 @@ div .card .card-title {
   color: #222222;
 }
 div .card .card-text {
-  max-height: 30px;
-  text-align: center;
+  max-height: 90%;
+  text-align: left;
   color: #4d4d4d;
 }
 div .card .btn {
-  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom:3%;
+  width: 90%;
   
   color: #e6ffff;
   background-color: #446df6;
