@@ -20,6 +20,23 @@ body{
  
   color: #fff;
 }
+ .wave-bg{
+  width: 2000px;
+  height: 350px;
+}
+ .wave-bg{
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+
+.centered {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .accordion{
   display: flex;
   max-width: 2000px;
