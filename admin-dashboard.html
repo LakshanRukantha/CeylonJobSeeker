@@ -10,6 +10,7 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="./styles/main.css" />
     <link rel="stylesheet" href="./styles/admin-dashboard.css" />
     <title>Dashboard</title>
@@ -64,9 +65,19 @@
         </div>
       </nav>
       <!-- Navbar End -->
+      <!-- Section: New Job Start -->
       <div class="container section-wrapper">
         <h2 class="section-title">Post A New Job</h2>
         <form class="form" action="">
+          <div class="mb-3">
+            <label for="jobTitle" class="form-label">Company Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="companyName"
+              placeholder="Enter Company Name"
+            />
+          </div>
           <div class="mb-3">
             <label for="jobTitle" class="form-label">Job Title</label>
             <input
@@ -122,11 +133,11 @@
             <label for="jobType" class="form-label">Job Type</label>
             <select class="form-select" id="jobType">
               <option selected>Select Job Type</option>
-              <option value="1">Full Time</option>
-              <option value="2">Part Time</option>
-              <option value="3">Contract</option>
-              <option value="4">Internship</option>
-              <option value="5">Temporary</option>
+              <option value="full_time">Full Time</option>
+              <option value="part_time">Part Time</option>
+              <option value="contract">Contract</option>
+              <option value="internship">Internship</option>
+              <option value="temporary">Temporary</option>
             </select>
           </div>
           <div class="mb-3">
@@ -141,6 +152,7 @@
           <button type="submit" class="btn-primary w-100">Submit</button>
         </form>
       </div>
+      <!-- Section: New Job End -->
       <!-- Footer Start -->
       <footer class="w-100">
         <div class="footer">
