@@ -1,0 +1,55 @@
+body {
+  background-color: #446df620;
+}
+div .main {
+  padding: 5px 3%;
+  display: flex;
+  flex-wrap: wrap;
+}
+div .card {
+  max-width: 300px;
+  min-width: 300px;
+  flex: 1 1 210px;
+  min-height: 500px;
+  border: 1px;
+  margin: 20px;
+  
+}
+div .card .icon { 
+  height: 30%;
+  margin-top: 10px;
+  
+}
+div .card .icon img {
+  
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: ;
+}
+div .card .card-body {
+  object-fit: cover;
+}
+div .card .card-title {
+  text-align: center;
+  color: #222222;
+}
+div .card .card-text {
+  max-height: 90%;
+  text-align: left;
+  color: #4d4d4d;
+}
+div .card .btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom:3%;
+  width: 90%;
+  
+  color: #e6ffff;
+  background-color: #446df6;
+}
