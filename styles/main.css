@@ -9,6 +9,7 @@
   --bg-light-blue: #f5faff;
   --text-light-color-2: #e0e0e0;
   --bg-shade-blue: #446df620;
+  --shadow-dark: rgba(0, 0, 0, 0.1);
 }
 
 * {

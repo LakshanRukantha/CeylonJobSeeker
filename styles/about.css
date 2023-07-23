@@ -1,0 +1,157 @@
+.developers-section {
+  display: block;
+  margin: 0 auto;
+}
+
+.developers-section .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.card-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 5px 10px var(--shadow-dark);
+  position: relative;
+}
+.profile-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 115px;
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+  background-image: url("../assets/images/about/cover-art.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 3px solid var(--primary-color);
+}
+.image {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  height: 170px;
+  width: 170px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.image .profile-img {
+  height: 100%;
+  width: 100%;
+  filter: grayscale(100%);
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  transition: border 0.5s ease-in-out, box-shadow 0.5s ease-in-out,
+    filter 0.3s ease-in-out;
+}
+
+.image .profile-img:hover {
+  filter: grayscale(0%);
+  padding: 0;
+  border: 3px solid var(--primary-color);
+  box-shadow: 0 5px 10px var(--shadow-dark);
+}
+
+.profile-card .text-data {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--text-primary-color);
+}
+
+.profile-card .text-data .name {
+  font-size: 1.5rem;
+  font-weight: 500;
+  background-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.profile-card .text-data .bg-code-tag {
+  position: absolute;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  top: -20px;
+  z-index: -1;
+  left: -40px;
+  font-size: 150px;
+  color: var(--shadow-dark);
+  font-weight: 600;
+}
+
+.text-data .sub-title {
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.profile-card .media-buttons {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+.media-buttons .link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  height: 2.6rem;
+  width: 2.6rem;
+  border-radius: 50%;
+  margin: 0 8px;
+  color: var(--text-light-color);
+  transition: transform 0.5s ease-in-out;
+  background-color: var(--primary-color);
+  text-decoration: none;
+}
+
+.media-buttons .link i {
+  font-size: 1.5rem;
+}
+
+.media-buttons .link:hover {
+  transform: rotate(360deg);
+}
+
+.profile-card .buttons {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.skill-badges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.skill-badges .skill-badge {
+  color: var(--text-primary-color);
+  padding: 0.2rem 1rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 1rem;
+  font-size: 0.8rem;
+}
