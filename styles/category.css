@@ -5,13 +5,12 @@ div .main {
   padding: 5px 3%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 div .card {
   max-width: 300px;
+  min-width: 300px;
   flex: 1 1 210px;
   min-height: 500px;
-  max-height: 600px;
   border: 1px;
   margin: 20px;
   
@@ -30,6 +29,7 @@ div .card .icon img {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  background-color: ;
 }
 div .card .card-body {
   object-fit: cover;
