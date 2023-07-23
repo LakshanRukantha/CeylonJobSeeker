@@ -8,10 +8,9 @@ div .main {
   justify-content: space-between;
 }
 div .card {
-  max-width: 300px;
-  flex: 1 1 210px;
-  text-align: center;
-  height: 500px;
+  max-width: 400px;
+  flex: 1 1 230px;
+  max-height: 600px;
   border: 1px;
   margin: 20px;
 }
@@ -31,14 +30,17 @@ div .card .card-body {
   object-fit: cover;
 }
 div .card .card-title {
+  text-align: center;
   color: #222222;
 }
 div .card .card-text {
-  text-align: left;
+  max-height: 30px;
+  text-align: center;
   color: #4d4d4d;
 }
 div .card .btn {
   width: 100%;
+  
   color: #e6ffff;
   background-color: #446df6;
 }
