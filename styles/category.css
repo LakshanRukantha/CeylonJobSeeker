@@ -10,7 +10,8 @@ div .card {
   max-width: 300px;
   min-width: 300px;
   flex: 1 1 210px;
-  min-height: 500px;
+  min-height: 300px;
+  max-height: 550px;
   border: 1px;
   margin: 20px;
   
@@ -29,7 +30,7 @@ div .card .icon img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  background-color: ;
+  
 }
 div .card .card-body {
   object-fit: cover;
@@ -39,7 +40,7 @@ div .card .card-title {
   color: #222222;
 }
 div .card .card-text {
-  max-height: 90%;
+  max-height: 150px ;
   text-align: left;
   color: #4d4d4d;
 }
@@ -49,7 +50,6 @@ div .card .btn {
   margin-right: auto;
   margin-bottom:3%;
   width: 90%;
-  
   color: #e6ffff;
   background-color: #446df6;
 }
