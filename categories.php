@@ -19,7 +19,8 @@
       <!-- Navbar Start -->
       <nav class="navbar navbar-expand-lg fixed-top w-full bg-body-tertiary">
         <div class="container-fluid px-lg-4">
-          <a class="navbar-brand" href="index.html">CJS</a>
+          <a class="navbar-brand" href="index.html"></a>
+         
           <button
             class="navbar-toggler"
             type="button"
@@ -71,16 +72,15 @@
                 <li>lorem</li>
                 <li>lorem</li>
               </div>
-              <br>
               <a href="#" class="btn btn-primary">Explore jobs</a> 
             </div>
           </div>
           <div class="card col-md-4 col-lg-12"> 
             <div class="image">
-              <img src="assets\images\se.png" alt="Card image cap">
+              <img src="assets\images\wb.png" alt="Card image cap">
             </div>
             <div class="card-body" >
-              <h5 class="card-title"><b>Software Engineer</b></h5>
+              <h5 class="card-title"><b>Web Developer</b></h5>
               <p class="card-text">Lorem ipsum dolor sit amet dnhgrmn hmbvc v gnhgfmdf hgfdgvfdgf consectetur adipisicing elit. Sapiente aut, q?</p>
               <div class="card-text">
                 <li>lorem</li>
@@ -88,7 +88,134 @@
                 <li>lorem</li>
                 <li>lorem</li>
               </div>
-              <br>
+              <a href="#" class="btn btn-primary">Explore jobs</a> 
+            </div>
+          </div>
+          <div class="card col-md-4 col-lg-12"> 
+            <div class="image">
+              <img src="assets\images\ds.png" alt="Card image cap">
+            </div>
+            <div class="card-body" >
+              <h5 class="card-title"><b>Data Scientist</b></h5>
+              <p class="card-text">Lorem ipsum dolor sit amet dnhgrmn hmbvc v gnhgfmdf hgfdgvfdgf consectetur adipisicing elit. Sapiente aut, q?</p>
+              <div class="card-text">
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+              </div>
+              <a href="#" class="btn btn-primary">Explore jobs</a> 
+            </div>
+          </div>
+          <div class="card col-md-4 col-lg-12"> 
+            <div class="image">
+              <img src="assets\images\mad.png" alt="Card image cap">
+            </div>
+            <div class="card-body" >
+              <h5 class="card-title"><b>Mobile App Developer</b></h5>
+              <p class="card-text">Lorem ipsum dolor sit amet dnhgrmn hmbvc v gnhgfmdf hgfdgvfdgf consectetur adipisicing elit. Sapiente aut, q?</p>
+              <div class="card-text">
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+              </div>
+              <a href="#" class="btn btn-primary">Explore jobs</a> 
+            </div>
+          </div>
+          <div class="card col-md-4 col-lg-12"> 
+            <div class="image">
+              <img src="assets\images\sa.png" alt="Card image cap">
+            </div>
+            <div class="card-body" >
+              <h5 class="card-title"><b>System Administrator</b></h5>
+              <p class="card-text">Lorem ipsum dolor sit amet dnhgrmn hmbvc v gnhgfmdf hgfdgvfdgf consectetur adipisicing elit. Sapiente aut, q?</p>
+              <div class="card-text">
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+              </div>
+              <a href="#" class="btn btn-primary">Explore jobs</a> 
+            </div>
+          </div>
+          <div class="card col-md-4 col-lg-12"> 
+            <div class="image">
+              <img src="assets\images\ne.png" alt="Card image cap">
+            </div>
+            <div class="card-body" >
+              <h5 class="card-title"><b>Network Engineer</b></h5>
+              <p class="card-text">Lorem ipsum dolor sit amet dnhgrmn hmbvc v gnhgfmdf hgfdgvfdgf consectetur adipisicing elit. Sapiente aut, q?</p>
+              <div class="card-text">
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+              </div>
+              <a href="#" class="btn btn-primary">Explore jobs</a> 
+            </div>
+          </div>
+          <div class="card col-md-4 col-lg-12"> 
+            <div class="image">
+              <img src="assets\images\iss.png" alt="Card image cap">
+            </div>
+            <div class="card-body" >
+              <h5 class="card-title"><b>IT Support Specialist</b></h5>
+              <p class="card-text">Lorem ipsum dolor sit amet dnhgrmn hmbvc v gnhgfmdf hgfdgvfdgf consectetur adipisicing elit. Sapiente aut, q?</p>
+              <div class="card-text">
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+              </div>
+              <a href="#" class="btn btn-primary">Explore jobs</a> 
+            </div>
+          </div>
+          <div class="card col-md-4 col-lg-12"> 
+            <div class="image">
+              <img src="assets\images\sm.png" alt="Card image cap">
+            </div>
+            <div class="card-body" >
+              <h5 class="card-title"><b>Sales and Marketing</b></h5>
+              <p class="card-text">Lorem ipsum dolor sit amet dnhgrmn hmbvc v gnhgfmdf hgfdgvfdgf consectetur adipisicing elit. Sapiente aut, q?</p>
+              <div class="card-text">
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+              </div>
+              <a href="#" class="btn btn-primary">Explore jobs</a> 
+            </div>
+          </div>
+          <div class="card col-md-4 col-lg-12"> 
+            <div class="image">
+              <img src="assets\images\sr.png" alt="Card image cap">
+            </div>
+            <div class="card-body" >
+              <h5 class="card-title"><b>Sales Representative</b></h5>
+              <p class="card-text">Lorem ipsum dolor sit amet dnhgrmn hmbvc v gnhgfmdf hgfdgvfdgf consectetur adipisicing elit. Sapiente aut, q?</p>
+              <div class="card-text">
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+              </div>
+              <a href="#" class="btn btn-primary">Explore jobs</a> 
+            </div>
+          </div>
+          <div class="card col-md-4 col-lg-12"> 
+            <div class="image">
+              <img src="assets\images\mm.png" alt="Card image cap">
+            </div>
+            <div class="card-body" >
+              <h5 class="card-title"><b>Marketing Manager</b></h5>
+              <p class="card-text">Lorem ipsum dolor sit amet dnhgrmn hmbvc v gnhgfmdf hgfdgvfdgf consectetur adipisicing elit. Sapiente aut, q?</p>
+              <div class="card-text">
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+              </div>
               <a href="#" class="btn btn-primary">Explore jobs</a> 
             </div>
           </div>
@@ -99,7 +226,7 @@
       <footer class="w-100">
         <div class="footer">
           <div class="footer-section flex-grow-1 mb-3">
-            <img src="#" alt="CeylonJobSeeker Logo" height="40" />
+            <img src="./assets/images/logo-light.svg" alt="CeylonJobSeeker Logo" height="40" />
             <div class="site-info">
               <span
                 >Designed and developed by Software Engineering
