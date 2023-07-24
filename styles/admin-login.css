@@ -44,6 +44,8 @@ body{
 	justify-content: flex-start;
 	align-items: center;
 	text-align: center;
+	margin-bottom: 90px;
+	padding: 0 1px;
 }
 
 .img img{
@@ -52,16 +54,23 @@ body{
 
 form{
 	width: 400px;
+	height: 450px;
 	align-items: center;
 	background: rgba(209, 213, 225, 0.25);
+	
+}
+.title{
+	font-size: 8%;
+	font-family: sans-serif;
+
 }
 
 .login-content img{
-    height: 100px;
+    height: 70px;
 }
 
 .login-content h2{
-	margin: 15px 0;
+	margin: 18px 0;
 	color: #4d4d4d;
 	text-transform: uppercase;
 	font-size: 2.9rem;
@@ -208,11 +217,12 @@ a:hover{
   }
   @import url(https://fonts.googleapis.com/css?family=Roboto:500);
 .google-btn {
-  width: 200px;
-  height: 42px;
+  width: 190px;
+  height: 40px;
   background-color: #446df6;
   border-radius: 2px;
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
+  
 }
 .google-btn .google-icon-wrapper {
   position: absolute;
