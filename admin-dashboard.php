@@ -67,15 +67,71 @@
       <!-- Navbar End -->
       <!-- Section: New Job Start -->
       <div class="container section-wrapper">
+
+      <?php
+// Include the database configuration file
+include("./config.php");
+
+// Define variables to hold the toast message and its class (success or error)
+$toastMessage = "";
+$toastClass = "";
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    if (
+        isset($_POST["companyName"]) &&
+        isset($_POST["jobTitle"]) &&
+        isset($_POST["jobDescription"]) &&
+        isset($_POST["jobCategory"]) &&
+        isset($_POST["jobLocation"]) &&
+        isset($_POST["jobSalary"]) &&
+        isset($_POST["jobType"]) &&
+        isset($_POST["jobDeadline"])
+    ) {
+        // Retrieve the form data
+        $companyName = $_POST["companyName"];
+        $jobTitle = $_POST["jobTitle"];
+        $jobDescription = $_POST["jobDescription"];
+        $jobCategory = $_POST["jobCategory"];
+        $jobLocation = $_POST["jobLocation"];
+        $jobSalary = $_POST["jobSalary"];
+        $jobType = $_POST["jobType"];
+        $jobDeadline = $_POST["jobDeadline"];
+
+        // Validate and sanitize the data (you can add more validation here)
+        $companyName = trim($companyName);
+        $jobTitle = trim($jobTitle);
+        $jobDescription = trim($jobDescription);
+        $jobLocation = trim($jobLocation);
+        $jobSalary = (float) $jobSalary;
+        $jobDeadline = date("Y-m-d", strtotime($jobDeadline)); // Convert date to MySQL format (YYYY-MM-DD)
+
+        // Insert the data into the database
+        $sql = "INSERT INTO jobs (company, title, description, category_id, location, salary, type, deadline, post_date) 
+                VALUES ('$companyName', '$jobTitle', '$jobDescription', '$jobCategory', '$jobLocation', $jobSalary, '$jobType', '$jobDeadline', NOW())";
+
+        if ($conn->query($sql) === TRUE) {
+            // Display the success message in the toast
+            $toastMessage = "Data inserted successfully!";
+            $toastClass = "alert alert-success";
+        } else {
+            // Display the error message in the toast
+            $toastMessage = "Error: " . $sql . "<br>" . $conn->error;
+            $toastClass = "alert alert-danger";
+        }
+    }
+}
+?>
+
         <h2 class="section-title">Post A New Job</h2>
-        <form class="form" action="">
+        <form class="form" id="jobPostForm" method="post" action="">
           <div class="mb-3">
             <label for="jobTitle" class="form-label">Company Name</label>
             <input
               type="text"
               class="form-control"
               id="companyName"
-              placeholder="Enter Company Name"
+              name="companyName"
+              placeholder="Enter Company Name..."
             />
           </div>
           <div class="mb-3">
@@ -84,6 +140,7 @@
               type="text"
               class="form-control"
               id="jobTitle"
+              name="jobTitle"
               placeholder="Enter Job Title"
             />
           </div>
@@ -94,21 +151,22 @@
             <textarea
               class="form-control"
               id="jobDescription"
+              name="jobDescription"
               rows="3"
               placeholder="Enter Job Description"
             ></textarea>
           </div>
           <div class="mb-3">
             <label for="jobCategory" class="form-label">Job Category</label>
-            <select class="form-select" id="jobCategory">
+            <select class="form-select" id="jobCategory" name="jobCategory">
               <option selected>Select Job Category</option>
-              <option value="it">IT</option>
-              <option value="accounting">Accounting</option>
-              <option value="marketing">Marketing</option>
-              <option value="engineering">Engineering</option>
-              <option value="teaching">Teaching</option>
-              <option value="medical">Medical</option>
-              <option value="other">Other</option>
+              <option value="1">IT</option>
+              <option value="2">Accounting</option>
+              <option value="3">Marketing</option>
+              <option value="4">Engineering</option>
+              <option value="5">Teaching</option>
+              <option value="6">Medical</option>
+              <option value="7">Other</option>
             </select>
           </div>
           <div class="mb-3">
@@ -117,6 +175,7 @@
               type="text"
               class="form-control"
               id="jobLocation"
+              name="jobLocation"
               placeholder="Enter Job Location"
             />
           </div>
@@ -126,12 +185,13 @@
               type="number"
               class="form-control"
               id="jobSalary"
+              name="jobSalary"
               placeholder="Enter Job Salary"
             />
           </div>
           <div class="mb-3">
             <label for="jobType" class="form-label">Job Type</label>
-            <select class="form-select" id="jobType">
+            <select class="form-select" id="jobType" name="jobType">
               <option selected>Select Job Type</option>
               <option value="full_time">Full Time</option>
               <option value="part_time">Part Time</option>
@@ -146,11 +206,19 @@
               type="date"
               class="form-control"
               id="jobDeadline"
+              name="jobDeadline"
               placeholder="Enter Job Deadline"
             />
           </div>
           <button type="submit" class="btn-primary w-100">Submit</button>
+          <?php  echo("<div id='alertMessageArea' class='$toastClass mt-4' role='alert'>
+  $toastMessage
+</div>") ?>
         </form>
+        <!-- Publish To Database -->
+
+        <!-- Publish To Database End -->
+
       </div>
       <!-- Section: New Job End -->
       <!-- Footer Start -->
@@ -241,6 +309,8 @@
       </footer>
       <!-- Footer End -->
     </div>
+    <!-- Custom JS -->
+    <script src="./js/admin-dashboard.js"></script>
     <!-- Popper - CDN -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
