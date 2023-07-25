@@ -9,6 +9,15 @@
   border-radius: 0.5rem;
   background-color: var(--text-light-color);
   padding: 0.8rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+.job-page-title{
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 .card-content-wrapper {
