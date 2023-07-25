@@ -122,7 +122,10 @@ form{
 	
 	transition: .4s;
 }
-
+.input-div input {
+	width: 100%; /* Adjust the width of the input boxes */
+	/* Add any other styling you need for the input boxes */
+  }
 
 
 
@@ -279,6 +282,9 @@ a:hover{
 	  width: 80%; /* Adjust the width for mobile */
 	  max-width: 300px; /* Set a maximum width for small screens */
 	}
+	.input-div input{
+		width: 100%;
+	}
 @keyframes fadeInOut {
 	0% {
 	  opacity: 0;
@@ -290,7 +296,8 @@ a:hover{
 	  opacity: 0;
 	}
   }
-  
+}
+
   /* Apply the animation to the "title" class */
   .title {
 	animation: fadeInOut 2s infinite;
