@@ -117,19 +117,14 @@ form{
 	content: '';
 	position: absolute;
 	bottom: -2px;
-	width: 0%;
+	width: 8%;
 	height: 2px;
 	
 	transition: .4s;
 }
 
-.input-div:before{
-	right: 50%;
-}
 
-.input-div:after{
-	left: 50%;
-}
+
 
 .input-div.focus:before, .input-div.focus:after{
 	width: 50%;
@@ -145,23 +140,7 @@ form{
 	
 }
 
-/* Add box styling to the username inputs */
 
-  
-  /* Add box styling to the focused input */
-  .input-div.focus {
-	/* Adjust the border color to your preference when focused */
-	border-color: #0c9142;
-  }
-  .div{
-	margin-left: 0;
-  }
-  
-  /* Adjust the input font size if needed */
-  .input-div input {
-	font-size: 1.2rem;
-  }
-  
 
 .input-div.pass{
 	margin-bottom: 4px;
