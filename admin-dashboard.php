@@ -70,7 +70,7 @@
 
       <?php
 // Include the database configuration file
-include("./config.php");
+include("./config/config.php");
 
 // Define variables to hold the toast message and its class (success or error)
 $toastMessage = "";

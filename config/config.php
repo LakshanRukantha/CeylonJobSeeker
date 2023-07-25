@@ -1,15 +1,14 @@
 <?php
-$host = "your_host_name";
-$user = "your_username";
-$pass = "your_password";
-$db = "your_database_name";
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db = "ceylon_job_seeker";
 
+// Establish a connection to the database
 $conn = mysqli_connect($host, $user, $pass, $db);
 
-// Check connection status
+// Check connection status and handle errors
 if (!$conn) {
-    die("❌ Connection failed: " . mysqli_connect_error());
-} else {
-    echo "✅ Connected successfully!";
+    die("❌ DB Connection failed: " . mysqli_connect_error());
 }
 ?>
