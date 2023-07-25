@@ -295,6 +295,11 @@ a:hover{
 		justify-content: center;
 	}
 }
+@media screen and (max-width: 600px) {
+	form {
+	  width: 80%; /* Adjust the width for mobile */
+	  max-width: 300px; /* Set a maximum width for small screens */
+	}
 @keyframes fadeInOut {
 	0% {
 	  opacity: 0;
