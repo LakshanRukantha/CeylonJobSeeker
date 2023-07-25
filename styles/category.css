@@ -1,5 +1,5 @@
 body {
-  background-color: #446df620;
+  background-color: var(--bg-shade-blue);
 }
 div .row {
   display: flex;
@@ -44,11 +44,11 @@ div .card .card-body {
 }
 div .card .card-title {
   text-align: center;
-  color: #222222;
+  color: var(--text-primary-color);
 }
 div .card .card-text {
   text-align:left;
-  color: #4d4d4d;
+  color: var(--text-secondary-color);
 } 
 div .card li {
   font-size: 14px;
@@ -60,6 +60,6 @@ div .card .btn {
   margin-right: auto;
   margin-bottom: 25px;
   width: 90%;
-  color: #e6ffff;
-  background-color: #446df6;
+  color: var(--text-light-color);
+  background-color: var(--primary-color);
 }
