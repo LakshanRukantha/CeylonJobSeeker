@@ -31,6 +31,31 @@
   width: 80px;
 }
 
+.section-title {
+  font-size: 3rem;
+  border-left: 6px solid var(--secondary-color);
+  padding-left: 1rem;
+  max-width: 500px;
+}
+
+.section-title span {
+  font-weight: 700;
+  color: var(--text-secondary-color);
+}
+
+@media screen and (max-width: 768px) {
+  .section-title {
+    border-left: 4px solid var(--secondary-color);
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
+
 .divider {
   width: 100%;
   height: 2px;
