@@ -69,20 +69,14 @@
             </div>
             <div class="card-body" >
               <h5 class="card-title">IT</h5>
-              <div class="card-text overflow-y-scroll">
-                <p>The Information Technology (IT) job category encompasses a wide range of roles that play a 
-                  crucial role in managing, implementing, and supporting technology solutions within organizations. IT 
-                  professionals are at the forefront of modern business operations, responsible for designing,
-                   developing, and maintaining the hardware, software, and networks that keep businesses running smoothly and securely.
+              <div class="card-text">
+                <p>IT professionals manage technology solutions, systems, and networks to support business operations and ensure cybersecurity.
                 </p>
               </div>
-              <li>Software Engineer</li>
-              <li>Web Developer</li>
-              <li>Data Scientist</li>
-              <li>Mobile App Developer</li>
-              <li>Systems Administrator</li>
-              <li>Network Engineer</li>
-              <li>IT Support Specialist</li>
+                <li>Software Engineer</li>
+                <li>Web Developer</li>
+                <li>Data Scientist</li>
+                <li>Network Engineer</li>
             </div>
               <a href="#" class="btn btn-primary">Explore jobs</a> 
           </div>
@@ -92,18 +86,13 @@
             </div>
             <div class="card-body" >
               <h5 class="card-title">Accounting</h5>
-              <div class="card-text overflow-y-scroll">
-                <p>The Accounting job category involves professionals who are responsible for 
-                  managing financial transactions, records, and reports within an organization. 
-                  They play a critical role in ensuring the accuracy and compliance of financial data, providing 
-                  valuable insights for decision-making, and supporting the overall financial health of the business.</p>
+              <div class="card-text">
+                <p>Accountants maintain financial records, prepare reports, and ensure tax compliance to support business financial health.</p>
               </div>
                 <li>Accountant</li>
                 <li>Financial Analyst</li>
                 <li>Bookkeeper</li>
-                <li>Tax Specialist</li>
                 <li>Auditor</li>
-                <li>Financial Advisor</li>
             </div>
               <a href="#" class="btn btn-primary">Explore jobs</a> 
           </div>
@@ -113,18 +102,13 @@
             </div>
             <div class="card-body" >
               <h5 class="card-title">Marketing</h5>
-              <div class="card-text overflow-y-scroll">
-                <p>The Marketing job category encompasses a wide range of roles dedicated to promoting products, services,
-                   and brands to target audiences. Marketing professionals play a crucial role in understanding consumer behavior,
-                    creating compelling campaigns,
-                   and implementing strategies to drive customer engagement, brand awareness, and ultimately, business growth.</p>
+              <div class="card-text">
+                <p>Marketers create campaigns, analyze data, and manage brands to drive customer engagement and business growth.</p>
               </div>
-                <li>Sales Representative</li>
                 <li>Marketing Manager</li>
                 <li>Digital Marketing Specialist</li>
                 <li>Advertising Coordinator</li>
                 <li>Brand Manager</li>
-                <li>Business Development Associate</li>  
             </div>
               <a href="#" class="btn btn-primary">Explore jobs</a> 
           </div>
@@ -134,18 +118,13 @@
             </div>
             <div class="card-body" >
               <h5 class="card-title">Engineering</h5>
-              <div class="card-text overflow-y-scroll">
-                <p>The Engineering job category comprises a diverse range of roles that involve the application of scientific principles
-                  , mathematical concepts, and technological innovations to design, develop, and improve various products, systems, and processes.
-                   Engineers play a critical role in shaping the world we live in, contributing to 
-                  advancements in industries such as aerospace, civil, mechanical, electrical, and more.</p>
+              <div class="card-text">
+                <p>Engineers design, develop, and improve products, systems, and structures using scientific principles and technology.</p>
               </div>
                 <li>Mechanical Engineer</li>
                 <li>Electrical Engineer</li>
                 <li>Civil Engineer</li>
-                <li>Aerospace Engineer</li>
-                <li>Chemical Engineer</li>
-                <li>Biomedical Engineer</li> 
+                <li>Chemical Engineer</li> 
             </div>
               <a href="#" class="btn btn-primary">Explore jobs</a> 
           </div>
@@ -155,18 +134,13 @@
             </div>
             <div class="card-body" >
               <h5 class="card-title">Teaching</h5>
-              <div class="card-text overflow-y-scroll">
-                <p>The Teaching job category encompasses professionals dedicated to imparting knowledge, skills,
-                   and values to students across various educational levels. Teachers play a vital role in shaping
-                    the minds and futures of young learners,
-                   fostering their intellectual curiosity, critical thinking abilities, and personal development.</p>
+              <div class="card-text">
+                <p>Teachers educate and support students, develop curriculum, and foster a positive learning environment.</p>
               </div>
                 <li>Teacher</li>
                 <li>Professor</li>
                 <li>Tutor</li>
                 <li>Education Administrator</li>
-                <li>School Counselor</li>
-                <li>Librarian</li> 
             </div>
               <a href="#" class="btn btn-primary">Explore jobs</a> 
           </div>
@@ -176,18 +150,13 @@
             </div>
             <div class="card-body" >
               <h5 class="card-title">Medical</h5>
-              <div class="card-text overflow-y-scroll">
-                <p>The Medical job category covers a wide range of roles dedicated to providing healthcare services,
-                   diagnosing medical conditions, and promoting well-being.
-                   Professionals in this category play a vital role in caring for patients, improving health outcomes,
-                    and advancing medical research.</p>
+              <div class="card-text">
+                <p>Medical professionals provide healthcare, diagnose conditions, and conduct research to improve patient well-being.</p>
               </div>
                 <li>Registered Nurse</li>
                 <li>Physician</li>
                 <li>Medical Assistant</li>
                 <li>Pharmacist</li>
-                <li>Physical Therapist</li>
-                <li>Healthcare Administrator</li>
             </div>
               <a href="#" class="btn btn-primary">Explore jobs</a> 
           </div>
@@ -197,16 +166,11 @@
             </div>
             <div class="card-body" >
               <h5 class="card-title">Other</h5>
-              <div class="card-text overflow-y-scroll">
-                <p>encompasses a diverse range of roles that do not fall into specific industry or professional categories.
-                   These roles can vary widely,
-                   covering unique and specialized positions across various sectors, organizations, and industries.</p>
+              <div class="card-text">
+                <p>Various roles with specialized tasks, support functions, and creative responsibilities in diverse industries.</p>
               </div>
                 <li>Receptionist</li>
                 <li>UX/UI Designer</li>
-                <li>Video Editor</li>
-                <li>Cashier</li>
-                <li>Machine Operator</li>
                 <li>Lawyer</li>
                 <li>Travel Agent</li>
             </div>
