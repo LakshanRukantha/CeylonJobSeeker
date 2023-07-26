@@ -1,187 +1,182 @@
-body{
-	width: 100%;
-	min-height: 100vh;
-	background-color: var(--text-light-color);
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--text-light-color);
 }
-                            
-                         /* gif */
- /* gif */
+
+/* gif */
+/* gif */
 .gif-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 500px; /* Set the height of the GIF container */
-	overflow: hidden;
-	position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px; /* Set the height of the GIF container */
+  overflow: hidden;
+  position: relative;
+}
+
+.responsive-gif {
+  width: auto;
+  height: 100%;
+  display: block;
+  max-width: 100%; /* Ensure the GIF doesn't exceed its original size */
+  object-fit: cover; /* Scale the GIF to cover the entire container */
+}
+
+/* Media query for responsive adjustments */
+@media (max-width: 768px) {
+  .gif-container {
+    height: 300px; /* Adjust the height for mobile screens */
   }
-  
+
   .responsive-gif {
-	width: auto;
-	height: 100%;
-	display: block;
-	max-width: 100%; /* Ensure the GIF doesn't exceed its original size */
-	object-fit: cover; /* Scale the GIF to cover the entire container */
+    width: 100%; /* Adjust the width for mobile screens */
+    height: 100%; /* Adjust the height for mobile screens */
   }
-  
-  /* Media query for responsive adjustments */
-  @media (max-width: 768px) {
-	.gif-container {
-	  height: 300px; /* Adjust the height for mobile screens */
-	}
-  
-	.responsive-gif {
-	  width: 100%; /* Adjust the width for mobile screens */
-	  height: 100%; /* Adjust the height for mobile screens */
-	}
-  }
-  
-
+}
 
 .btn-primary:active {
   transform: scale(0.98);
 }
-  
+
 .btn-primary:active {
   transform: scale(0.98);
 }
 
-.container{
-	width: 100%;
-	min-height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	
+.container {
+  width: 100%;
+  display: flex;
+  margin: 2rem auto;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Code for the right section (column) */
 
-                         /* Code for the right section (column) */
-
-
-.row section.right .messageForm{
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	padding-top: 10px;
+.row section.right .messageForm {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 10px;
 }
-.row section.right .inputGroup{
-	margin: 1rem 0px;
-	position: relative;
+.row section.right .inputGroup {
+  margin: 1rem 0px;
+  position: relative;
 }
-.messageForm .halfWidth{
-	flex-basis: 48%;
+.messageForm .halfWidth {
+  flex-basis: 48%;
 }
-.messageForm .fullWidth{
-	flex-basis: 100%;
+.messageForm .fullWidth {
+  flex-basis: 100%;
 }
 
-.inputGroup button{
-	padding: 8px 16px;
-	font-size: 18px;
-	background-color: var(--primary-color);
-	color: var(--text-light-color);
-	border: 1px solid transparent;
-	border-radius: 25px;
-	outline: none;
-	cursor: pointer;
-	box-shadow: 0px 8px 15px var(--shadow-dark);
-	transition: 0.4s ease-in-out;
+.message-input-area {
+  min-height: 200px !important;
 }
 
-@media(max-width: 1100px){
-	.messageForm .halfWidth{
-		flex-basis: 100%;
-	}
-}
-@media(max-width: 900px){
-	.container .row{
-		flex-wrap: wrap;
-	}
-	.row section.left, .row section.right{
-		flex-basis: 100%;
-		margin: 2rem 0px;
-	}
+.inputGroup button {
+  padding: 8px 16px;
+  font-size: 18px;
+  background-color: var(--primary-color);
+  color: var(--text-light-color);
+  border: 1px solid transparent;
+  border-radius: 25px;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0px 8px 15px var(--shadow-dark);
+  transition: 0.4s ease-in-out;
 }
 
-
+@media (max-width: 1100px) {
+  .messageForm .halfWidth {
+    flex-basis: 100%;
+  }
+}
+@media (max-width: 900px) {
+  .container .row {
+    flex-wrap: wrap;
+  }
+  .row section.left,
+  .row section.right {
+    flex-basis: 100%;
+    margin: 2rem 0px;
+  }
+}
 
 .element {
-	margin-top: 4em; /* Adjust the value (4em) to move the element down as needed */
-	/* Add any other styles for the element */
-  }
+  margin-top: 4em; /* Adjust the value (4em) to move the element down as needed */
+  /* Add any other styles for the element */
+}
 
+/* secont Code for the left section (column) */
 
+.container {
+  width: 100%;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-            /* secont Code for the left section (column) */
-
-
-  .container{
-	width: 100%;
-	min-height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-  }
-
-section.left .contactInfo{
-	margin-bottom: 16px;
+section.left .contactInfo {
+  margin-bottom: 16px;
 }
-.contactInfo .iconGroup{
-	display: flex;
-	align-items: center;
-	margin: 25px 0px;
+.contactInfo .iconGroup {
+  display: flex;
+  align-items: center;
+  margin: 25px 0px;
 }
-.iconGroup .icon{
-	min-width: 45px;
-	min-height: 45px;
-	border: 2px solid var(--primary-color);
-	border-radius: 50%;
-	margin-right: 20px;
-	position: relative;
+.iconGroup .icon {
+  min-width: 45px;
+  min-height: 45px;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  margin-right: 20px;
+  position: relative;
 }
-.iconGroup .icon i{
-	font-size: 20px;
-	color:#000000;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+.iconGroup .icon i {
+  font-size: 20px;
+  color: #000000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.iconGroup .details span{
-	display: block;
-	color:#000000;
-	font-size: 18px;
+.iconGroup .details span {
+  display: block;
+  color: #000000;
+  font-size: 18px;
 }
-.iconGroup .details span:nth-child(1){
-	text-transform: uppercase;
-	color:#000000;
+.iconGroup .details span:nth-child(1) {
+  text-transform: uppercase;
+  color: #000000;
 }
-section.left .socialMedia{
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	flex-wrap: wrap;
-	margin: 22px 0px 20px;
+section.left .socialMedia {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 22px 0px 20px;
 }
-.socialMedia a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-	width: 2.6rem;
-	height: 2.6rem;
-	text-decoration: none;
-	text-align: center;
-	margin-right: 15px;
-	border-radius: 50%;
-	background-color: var(--primary-color);
-	transition: 0.4s;
+.socialMedia a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  text-decoration: none;
+  text-align: center;
+  margin-right: 15px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  transition: 0.4s;
 }
-.socialMedia a i{
-	color: #FFFFFF;
-	font-size: 20px;
-	border: 1px solid transparent;
-	transition-delay: 0.4s;
+.socialMedia a i {
+  color: #ffffff;
+  font-size: 20px;
+  border: 1px solid transparent;
+  transition-delay: 0.4s;
 }
-.socialMedia a:hover{
-	transform: rotate(360deg);
+.socialMedia a:hover {
+  transform: rotate(360deg);
 }
