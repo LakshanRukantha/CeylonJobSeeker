@@ -1,6 +1,6 @@
 .developers-section {
-  display: flex;
-  align-items: center;
+  display: block;
+  margin: 0 auto;
 }
 
 .developers-section .row {
@@ -15,19 +15,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .profile-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   min-width: 300px;
   width: 300px;
-  min-height: 400px;
-  height: 400px;
   overflow: hidden;
   border-radius: 0.5rem;
   padding: 1rem;
@@ -51,16 +47,14 @@
   position: relative;
   display: block;
   margin: 0 auto;
-  min-height: 170px;
-  min-width: 170px;
+  height: 170px;
+  width: 170px;
   border-radius: 50%;
   margin-bottom: 10px;
 }
 .image .profile-img {
-  max-height: 170px;
   height: 100%;
   width: 100%;
-  max-width: 170px;
   filter: grayscale(100%);
   object-fit: cover;
   border-radius: 50%;
@@ -112,7 +106,7 @@
 .profile-card .media-buttons {
   display: flex;
   align-items: center;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   margin-bottom: 1rem;
 }
 .media-buttons .link {
@@ -150,6 +144,7 @@
   justify-content: space-around;
   width: 100%;
   flex-direction: row;
+  margin-top: 1rem;
   gap: 1rem;
 }
 
