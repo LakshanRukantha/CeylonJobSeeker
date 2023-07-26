@@ -74,50 +74,7 @@ body{
 .messageForm .fullWidth{
 	flex-basis: 100%;
 }
-.messageForm input, .messageForm textarea{
-	width: 100%;
-	font-size: 0.8rem;
-	padding: 0.2rem 0.4rem;
-	background-color: var( --bg-light-blue);
-	color: var(--text-secondary-color);             
-	border: none;
-	border-bottom: 2px solid var(--text-secondary-color);
-	outline: none;
-}
-.messageForm textarea{
-	resize: none;
-	height: 220px;
-	display: block;
-}
-textarea::-webkit-scrollbar{
-	width: 5px;
-}
-textarea::-webkit-scrollbar-track{
-	background-color: var(--text-primary-color);
-	border-radius: 15px;
-}
-textarea::-webkit-scrollbar-thumb{
-	background-color: var(--primary-color);
-	border-radius: 15px;
-}
-.inputGroup label{
-	position: absolute;
-	left: 0;
-	bottom: 4px;
-	color: var(--text-primary-color);
-	font-size: 18px;
-	transition: 0.4s;
-	pointer-events: none;
-}
-.inputGroup:nth-child(4) label{
-	top: 2px;
-}
-.inputGroup .input-field:focus ~ label,
-.inputGroup .input-field:valid ~ label
-{
-	transform: translateY(-30px);
-	font-size: 16px;
-}
+
 .inputGroup button{
 	padding: 8px 16px;
 	font-size: 18px;
