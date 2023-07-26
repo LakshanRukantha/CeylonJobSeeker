@@ -1,0 +1,13 @@
+.landing-section {
+  background-color: burlywood;
+}
+
+.left-wrapper {
+  background-color: cadetblue;
+  padding: 1rem;
+}
+
+.right-wrapper {
+  padding: 1rem;
+  background-color: yellowgreen;
+}
