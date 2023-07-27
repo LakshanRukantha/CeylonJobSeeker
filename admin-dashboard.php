@@ -1,3 +1,17 @@
+<?php 
+include("./config/config.php");
+session_start();
+
+$toastMessage = isset($_SESSION['toastMessage']) ? $_SESSION['toastMessage'] : "";
+$toastClass = isset($_SESSION['toastClass']) ? $_SESSION['toastClass'] : "";
+
+// Clear the session variables for new messages
+unset($_SESSION['toastMessage']);
+unset($_SESSION['toastClass']);
+
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,10 +35,10 @@
       <nav class="navbar navbar-expand-lg fixed-top w-full bg-body-tertiary">
         <div class="container-fluid px-lg-4">
           <a class="navbar-brand" href="index.html"
-            ><img
-              class="img-logo"
-              src="./assets/images/logo.svg"
-              alt="CJS Logo"
+          ><img
+          class="img-logo"
+          src="./assets/images/logo.svg"
+          alt="CJS Logo"
           /></a>
           <button
             class="navbar-toggler"
@@ -34,17 +48,17 @@
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
-          >
+            >
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="./index.html"
-                  >Home</a
+                class="nav-link active"
+                aria-current="page"
+                href="./index.html"
+                >Home</a
                 >
               </li>
               <li class="nav-item">
@@ -65,79 +79,73 @@
         </div>
       </nav>
       <!-- Navbar End -->
-      <!-- Section: New Job Start -->
       <div class="container section-wrapper">
+        <?php
+              echo("<div id='submitStatusArea' class='$toastClass' role='alert'>
+              $toastMessage
+              </div>");
+              ?>
+        <div class="row create-section">
+          <div class="col-12 col-lg-6">
+            <!-- Add New Admin Start -->
 
-      <?php
-// Include the database configuration file
-include("./config/config.php");
-
-// Define variables to hold the toast message and its class (success or error)
-$toastMessage = "";
-$toastClass = "";
-
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    if (
-        isset($_POST["companyName"]) &&
-        isset($_POST["jobTitle"]) &&
-        isset($_POST["jobDescription"]) &&
-        isset($_POST["jobCategory"]) &&
-        isset($_POST["jobLocation"]) &&
-        isset($_POST["jobSalary"]) &&
-        isset($_POST["jobType"]) &&
-        isset($_POST["jobDeadline"])
-    ) {
-        // Retrieve the form data
-        $companyName = $_POST["companyName"];
-        $jobTitle = $_POST["jobTitle"];
-        $jobDescription = $_POST["jobDescription"];
-        $jobCategory = $_POST["jobCategory"];
-        $jobLocation = $_POST["jobLocation"];
-        $jobSalary = $_POST["jobSalary"];
-        $jobType = $_POST["jobType"];
-        $jobDeadline = $_POST["jobDeadline"];
-
-        // Validate and sanitize the data (you can add more validation here)
-        $companyName = trim($companyName);
-        $jobTitle = trim($jobTitle);
-        $jobDescription = trim($jobDescription);
-        $jobLocation = trim($jobLocation);
-        $jobSalary = (float) $jobSalary;
-        $jobDeadline = date("Y-m-d", strtotime($jobDeadline)); // Convert date to MySQL format (YYYY-MM-DD)
-
-        // Insert the data into the database
-        $sql = "INSERT INTO jobs (company, title, description, category_id, location, salary, type, deadline, post_date) 
-                VALUES ('$companyName', '$jobTitle', '$jobDescription', '$jobCategory', '$jobLocation', $jobSalary, '$jobType', '$jobDeadline', NOW())";
-
-        if ($conn->query($sql) === TRUE) {
-            // Display the success message in the toast
-            $toastMessage = "Data inserted successfully!";
-            $toastClass = "alert alert-success";
-        } else {
-            // Display the error message in the toast
-            $toastMessage = "Error: " . $sql . "<br>" . $conn->error;
-            $toastClass = "alert alert-danger";
-        }
-    }
-}
-?>
-
-        <h2 class="section-title mb">Post A <span>New Job</span></h2>
-        <form class="form" id="jobPostForm" method="post" action="">
+        <h2 class="section-title">Add New <span>Admin</span></h2>
+        <form class="form" id="addNewAdminForm" action="./php/add_new_admin.php" method="post">
           <div class="mb-3">
-            <label for="jobTitle" class="form-label">Company Name</label>
+            <label for="adminName" class="form-label">Full Name</label>
             <input
               type="text"
               class="form-control"
-              id="companyName"
-              name="companyName"
-              placeholder="Enter Company Name..."
+              id="adminName"
+              name="adminName"
+              placeholder="Enter Admin Name..."
+            />
+          </div>
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input
+              type="text"
+              class="form-control"
+              id="username"
+              name="username"
+              placeholder="Enter Username..."
+            />
+            
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              name="password"
+              placeholder="Enter Password..."
+            />
+          </div>
+          <button type="submit" class="btn-primary w-100 mt-3">Create Admin</button>
+         <div id='addAdminAlertMessageArea' class='mt-4' role='alert'></div>
+        </form>
+
+        <!-- Add New Admin End -->
+          </div>
+          <div class="col-12 col-lg-6">
+      <!-- Section: New Job Start -->
+      <h2 class="section-title mb">Post A <span>New Job</span></h2>
+        <form class="form" id="jobPostForm" method="post" action="./php/add_new_job_as_admin.php">
+          <div class="mb-3">
+            <label for="jobTitle" class="form-label">Company Name</label>
+            <input
+            type="text"
+            class="form-control"
+            id="companyName"
+            name="companyName"
+            placeholder="Enter Company Name..."
             />
           </div>
           <div class="mb-3">
             <label for="jobTitle" class="form-label">Job Title</label>
             <input
-              type="text"
+            type="text"
               class="form-control"
               id="jobTitle"
               name="jobTitle"
@@ -211,49 +219,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             />
           </div>
           <button type="submit" class="btn-primary w-100">Submit</button>
-          <?php  echo("<div id='alertMessageArea' class='$toastClass mt-4' role='alert'>
-  $toastMessage
-</div>") ?>
+          <div id='jobPostAlertMessageArea' class='mt-4' role='alert'></div>
         </form>
-        <!-- Add New Admin -->
+        <!-- Section: New Job End -->
+    </div>
+  </div>
+        
 
-        <h2 class="section-title">Add New <span>Admin</span></h2>
-        <form class="form" id="addNewAdminForm" action="" method="post">
-          <div class="mb-3">
-            <label for="adminName" class="form-label">Full Name</label>
-            <input
-              type="text"
-              class="form-control"
-              id="adminName"
-              name="adminName"
-              placeholder="Enter Admin Name..."
-            />
-          </div>
-          <div class="mb-3">
-            <label for="username" class="form-label">Username</label>
-            <input
-              type="text"
-              class="form-control"
-              id="username"
-              name="username"
-              placeholder="Enter Username..."
-            />
-            
-          </div>
-          <div class="mb-3">
-            <label for="password" class="form-label">Password</label>
-            <input
-              type="password"
-              class="form-control"
-              id="password"
-              name="password"
-              placeholder="Enter Password..."
-            />
-            <button type="submit" class="btn-primary w-100 mt-3">Create Admin</button>
-          </div>
-        </form>
-
-        <!-- Add New Admin End -->
+        
 
       </div>
       <!-- Footer Start -->

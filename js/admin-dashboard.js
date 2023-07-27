@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Select job post form and message area that display error messages
   const jobPostForm = document.getElementById("jobPostForm");
-  const jobPostAlertMessageArea = document.getElementById("alertMessageArea");
+  const jobPostAlertMessageArea = document.getElementById(
+    "jobPostAlertMessageArea"
+  );
 
   jobPostForm.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -16,28 +19,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Check if any of the required fields are empty
     if (!companyName.trim()) {
-      displayErrorMessage("Company Name is required.");
+      postJobErrorMessage("Company Name is required.");
       return;
     } else if (!jobTitle.trim()) {
-      displayErrorMessage("Job Title is required.");
+      postJobErrorMessage("Job Title is required.");
       return;
     } else if (!jobDescription.trim()) {
-      displayErrorMessage("Job Description is required.");
+      postJobErrorMessage("Job Description is required.");
       return;
     } else if (jobCategory === "Select Job Category") {
-      displayErrorMessage("Job Category is required.");
+      postJobErrorMessage("Job Category is required.");
       return;
     } else if (!jobLocation.trim()) {
-      displayErrorMessage("Job Location is required.");
+      postJobErrorMessage("Job Location is required.");
       return;
     } else if (!jobSalary.trim() || isNaN(parseFloat(jobSalary))) {
-      displayErrorMessage("Valid Job Salary is required.");
+      postJobErrorMessage("Valid Job Salary is required.");
       return;
     } else if (jobType === "Select Job Type") {
-      displayErrorMessage("Job Type is required.");
+      postJobErrorMessage("Job Type is required.");
       return;
     } else if (!jobDeadline.trim()) {
-      displayErrorMessage("Job Deadline is required.");
+      postJobErrorMessage("Job Deadline is required.");
       return;
     }
 
@@ -45,13 +48,40 @@ document.addEventListener("DOMContentLoaded", function () {
     jobPostForm.submit();
   });
 
-  function displayErrorMessage(message) {
+  function postJobErrorMessage(message) {
     jobPostAlertMessageArea.classList.add("alert", "alert-danger");
     jobPostAlertMessageArea.innerText = message;
+  }
+
+  function addAdminErrorMessage(message) {
+    addAdminAlertMessageArea.classList.add("alert", "alert-danger");
+    addAdminAlertMessageArea.innerText = message;
   }
 
   // Add New Admin Form Validations
 
   const addNewAdminForm = document.getElementById("addNewAdminForm");
-  console.log(addNewAdminForm);
+  const addAdminAlertMessageArea = document.getElementById(
+    "addAdminAlertMessageArea"
+  );
+
+  addNewAdminForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    const adminName = document.getElementById("adminName").value;
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    if (!adminName.trim()) {
+      addAdminErrorMessage("Admin name is required.");
+      return;
+    } else if (!username.trim()) {
+      addAdminErrorMessage("Username is required.");
+      return;
+    } else if (!password.trim()) {
+      addAdminErrorMessage("Password is required.");
+      return;
+    }
+
+    addNewAdminForm.submit();
+  });
 });
