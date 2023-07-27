@@ -122,7 +122,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 }
 ?>
 
-        <h2 class="section-title">Post A New Job</h2>
+        <h2 class="section-title mb">Post A <span>New Job</span></h2>
         <form class="form" id="jobPostForm" method="post" action="">
           <div class="mb-3">
             <label for="jobTitle" class="form-label">Company Name</label>
@@ -215,12 +215,47 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $toastMessage
 </div>") ?>
         </form>
-        <!-- Publish To Database -->
+        <!-- Add New Admin -->
 
-        <!-- Publish To Database End -->
+        <h2 class="section-title">Add New <span>Admin</span></h2>
+        <form class="form" id="addNewAdminForm" action="" method="post">
+          <div class="mb-3">
+            <label for="adminName" class="form-label">Full Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="adminName"
+              name="adminName"
+              placeholder="Enter Admin Name..."
+            />
+          </div>
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input
+              type="text"
+              class="form-control"
+              id="username"
+              name="username"
+              placeholder="Enter Username..."
+            />
+            
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              name="password"
+              placeholder="Enter Password..."
+            />
+            <button type="submit" class="btn-primary w-100 mt-3">Create Admin</button>
+          </div>
+        </form>
+
+        <!-- Add New Admin End -->
 
       </div>
-      <!-- Section: New Job End -->
       <!-- Footer Start -->
       <footer class="w-100">
         <div class="footer">

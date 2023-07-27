@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("jobPostForm");
-  const alertMessageArea = document.getElementById("alertMessageArea");
+  const jobPostForm = document.getElementById("jobPostForm");
+  const jobPostAlertMessageArea = document.getElementById("alertMessageArea");
 
-  form.addEventListener("submit", function (event) {
+  jobPostForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
     const companyName = document.getElementById("companyName").value;
@@ -42,11 +42,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Submit the form if all the required fields are filled
-    form.submit();
+    jobPostForm.submit();
   });
 
   function displayErrorMessage(message) {
-    alertMessageArea.classList.add("alert", "alert-danger");
-    alertMessageArea.innerText = message;
+    jobPostAlertMessageArea.classList.add("alert", "alert-danger");
+    jobPostAlertMessageArea.innerText = message;
   }
+
+  // Add New Admin Form Validations
+
+  const addNewAdminForm = document.getElementById("addNewAdminForm");
+  console.log(addNewAdminForm);
 });
