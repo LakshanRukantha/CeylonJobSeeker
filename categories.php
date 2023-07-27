@@ -12,7 +12,7 @@
     />
     <link rel="stylesheet" href="./styles/main.css" />
     <link rel="stylesheet" href="./styles/category.css"/>
-    <title>Categories</title>
+    <title>Job Categories</title>
   </head>
   <body>
     <div class="main-wrapper">
@@ -60,6 +60,9 @@
       </nav>
       <!-- Navbar End -->
       <!-- Hero Section Start -->
+      <div class="container mt-5">
+        <h2 class="section-title">Job Categories</h2>
+      </div>
       
         <!-- cards section start -->
         <div class="row">

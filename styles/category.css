@@ -1,5 +1,5 @@
 body {
-  background-color: var(--bg-shade-blue);
+  background-color: var(--text-light-color);
 }
 div .row {
   display: flex;
