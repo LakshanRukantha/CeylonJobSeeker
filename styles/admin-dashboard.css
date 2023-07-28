@@ -14,3 +14,8 @@
   border-radius: 0.5rem;
   margin-bottom: 2rem;
 }
+
+.job-listing-dashboard {
+  width: 100%;
+  overflow-x: auto;
+}

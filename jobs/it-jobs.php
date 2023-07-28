@@ -7,10 +7,6 @@ $varshow = $conn->query($sql);
 
 ?>
 
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -82,20 +78,12 @@ $varshow = $conn->query($sql);
       </nav>
       <!-- Navbar End -->
 
-      <div class="container">
-        <div class="job-page-title"><h2>IT Jobs</h2></div>
-
-
-
+      <div class="container mt-5 mb-5">
+        <h2 class="section-title">IT <span>Jobs</span></h2>
 
       <!-- Description End -->        
 
-
-
-
       <div class="container">
-
-
 
       <div class="row">
       <?php

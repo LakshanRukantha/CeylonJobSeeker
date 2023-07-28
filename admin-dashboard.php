@@ -35,10 +35,10 @@ error_reporting(E_ALL);
       <nav class="navbar navbar-expand-lg fixed-top w-full bg-body-tertiary">
         <div class="container-fluid px-lg-4">
           <a class="navbar-brand" href="index.html"
-          ><img
-          class="img-logo"
-          src="./assets/images/logo.svg"
-          alt="CJS Logo"
+            ><img
+              class="img-logo"
+              src="./assets/images/logo.svg"
+              alt="CJS Logo"
           /></a>
           <button
             class="navbar-toggler"
@@ -48,17 +48,17 @@ error_reporting(E_ALL);
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
-            >
+          >
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a
-                class="nav-link active"
-                aria-current="page"
-                href="./index.html"
-                >Home</a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./index.html"
+                  >Home</a
                 >
               </li>
               <li class="nav-item">
@@ -88,146 +88,194 @@ error_reporting(E_ALL);
         <div class="row create-section">
           <div class="col-12 col-lg-6">
             <!-- Add New Admin Start -->
-
-        <h2 class="section-title">Add New <span>Admin</span></h2>
-        <form class="form" id="addNewAdminForm" action="./php/add_new_admin.php" method="post">
-          <div class="mb-3">
-            <label for="adminName" class="form-label">Full Name</label>
-            <input
-              type="text"
-              class="form-control"
-              id="adminName"
-              name="adminName"
-              placeholder="Enter Admin Name..."
-            />
-          </div>
-          <div class="mb-3">
-            <label for="username" class="form-label">Username</label>
-            <input
-              type="text"
-              class="form-control"
-              id="username"
-              name="username"
-              placeholder="Enter Username..."
-            />
-            
-          </div>
-          <div class="mb-3">
-            <label for="password" class="form-label">Password</label>
-            <input
-              type="password"
-              class="form-control"
-              id="password"
-              name="password"
-              placeholder="Enter Password..."
-            />
-          </div>
-          <button type="submit" class="btn-primary w-100 mt-3">Create Admin</button>
-         <div id='addAdminAlertMessageArea' class='mt-4' role='alert'></div>
-        </form>
-
-        <!-- Add New Admin End -->
+            <h2 class="section-title">Add New <span>Admin</span></h2>
+            <form
+              class="form"
+              id="addNewAdminForm"
+              action="./php/add_new_admin.php"
+              method="post"
+            >
+              <div class="mb-3">
+                <label for="adminName" class="form-label">Full Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="adminName"
+                  name="adminName"
+                  placeholder="Enter Admin Name..."
+                />
+              </div>
+              <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="username"
+                  name="username"
+                  placeholder="Enter Username..."
+                />
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  name="password"
+                  placeholder="Enter Password..."
+                />
+              </div>
+              <button type="submit" class="btn-primary w-100 mt-3">
+                Create Admin
+              </button>
+              <div
+                id="addAdminAlertMessageArea"
+                class="mt-4"
+                role="alert"
+              ></div>
+            </form>
+            <!-- Add New Admin End -->
           </div>
           <div class="col-12 col-lg-6">
-      <!-- Section: New Job Start -->
-      <h2 class="section-title mb">Post A <span>New Job</span></h2>
-        <form class="form" id="jobPostForm" method="post" action="./php/add_new_job_as_admin.php">
-          <div class="mb-3">
-            <label for="jobTitle" class="form-label">Company Name</label>
-            <input
-            type="text"
-            class="form-control"
-            id="companyName"
-            name="companyName"
-            placeholder="Enter Company Name..."
-            />
-          </div>
-          <div class="mb-3">
-            <label for="jobTitle" class="form-label">Job Title</label>
-            <input
-            type="text"
-              class="form-control"
-              id="jobTitle"
-              name="jobTitle"
-              placeholder="Enter Job Title"
-            />
-          </div>
-          <div class="mb-3">
-            <label for="jobDescription" class="form-label"
-              >Job Description</label
+            <!-- Section: New Job Start -->
+            <h2 class="section-title mb">Post A <span>New Job</span></h2>
+            <form
+              class="form"
+              id="jobPostForm"
+              method="post"
+              action="./php/add_new_job_as_admin.php"
             >
-            <textarea
-              class="form-control"
-              id="jobDescription"
-              name="jobDescription"
-              rows="3"
-              placeholder="Enter Job Description"
-            ></textarea>
+              <div class="mb-3">
+                <label for="jobTitle" class="form-label">Company Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="companyName"
+                  name="companyName"
+                  placeholder="Enter Company Name..."
+                />
+              </div>
+              <div class="mb-3">
+                <label for="jobTitle" class="form-label">Job Title</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="jobTitle"
+                  name="jobTitle"
+                  placeholder="Enter Job Title"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="jobDescription" class="form-label"
+                  >Job Description</label
+                >
+                <textarea
+                  class="form-control"
+                  id="jobDescription"
+                  name="jobDescription"
+                  rows="3"
+                  placeholder="Enter Job Description"
+                ></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="jobCategory" class="form-label">Job Category</label>
+                <select class="form-select" id="jobCategory" name="jobCategory">
+                  <option selected>Select Job Category</option>
+                  <option value="1">IT</option>
+                  <option value="2">Accounting</option>
+                  <option value="3">Marketing</option>
+                  <option value="4">Engineering</option>
+                  <option value="5">Teaching</option>
+                  <option value="6">Medical</option>
+                  <option value="7">Other</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="jobLocation" class="form-label">Job Location</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="jobLocation"
+                  name="jobLocation"
+                  placeholder="Enter Job Location"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="jobSalary" class="form-label">Job Salary</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="jobSalary"
+                  name="jobSalary"
+                  placeholder="Enter Job Salary"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="jobType" class="form-label">Job Type</label>
+                <select class="form-select" id="jobType" name="jobType">
+                  <option selected>Select Job Type</option>
+                  <option value="full_time">Full Time</option>
+                  <option value="part_time">Part Time</option>
+                  <option value="contract">Contract</option>
+                  <option value="internship">Internship</option>
+                  <option value="temporary">Temporary</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="jobDeadline" class="form-label">Job Deadline</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="jobDeadline"
+                  name="jobDeadline"
+                  placeholder="Enter Job Deadline"
+                />
+              </div>
+              <button type="submit" class="btn-primary w-100">Submit</button>
+              <div id="jobPostAlertMessageArea" class="mt-4" role="alert"></div>
+            </form>
+            <!-- Section: New Job End -->
           </div>
-          <div class="mb-3">
-            <label for="jobCategory" class="form-label">Job Category</label>
-            <select class="form-select" id="jobCategory" name="jobCategory">
-              <option selected>Select Job Category</option>
-              <option value="1">IT</option>
-              <option value="2">Accounting</option>
-              <option value="3">Marketing</option>
-              <option value="4">Engineering</option>
-              <option value="5">Teaching</option>
-              <option value="6">Medical</option>
-              <option value="7">Other</option>
-            </select>
-          </div>
-          <div class="mb-3">
-            <label for="jobLocation" class="form-label">Job Location</label>
-            <input
-              type="text"
-              class="form-control"
-              id="jobLocation"
-              name="jobLocation"
-              placeholder="Enter Job Location"
-            />
-          </div>
-          <div class="mb-3">
-            <label for="jobSalary" class="form-label">Job Salary</label>
-            <input
-              type="number"
-              class="form-control"
-              id="jobSalary"
-              name="jobSalary"
-              placeholder="Enter Job Salary"
-            />
-          </div>
-          <div class="mb-3">
-            <label for="jobType" class="form-label">Job Type</label>
-            <select class="form-select" id="jobType" name="jobType">
-              <option selected>Select Job Type</option>
-              <option value="full_time">Full Time</option>
-              <option value="part_time">Part Time</option>
-              <option value="contract">Contract</option>
-              <option value="internship">Internship</option>
-              <option value="temporary">Temporary</option>
-            </select>
-          </div>
-          <div class="mb-3">
-            <label for="jobDeadline" class="form-label">Job Deadline</label>
-            <input
-              type="date"
-              class="form-control"
-              id="jobDeadline"
-              name="jobDeadline"
-              placeholder="Enter Job Deadline"
-            />
-          </div>
-          <button type="submit" class="btn-primary w-100">Submit</button>
-          <div id='jobPostAlertMessageArea' class='mt-4' role='alert'></div>
-        </form>
-        <!-- Section: New Job End -->
-    </div>
-  </div>
-        
+        </div>
+      <div class="col-12 job-listing-dashboard">
+        <table class="table table-hover table-striped">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Company Name</th>
+              <th scope="col">Job Title</th>
+              <th scope="col">Description</th>
+              <th scope="col">Job Location</th>
+              <th scope="col">Job Salary</th>
+              <th scope="col">Job Type</th>
+              <th scope="col">Deadline</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody id="jobListTableBody">
+            <?php
+              $sql = "SELECT * FROM jobs";
+              $result = mysqli_query($conn, $sql);
+              if (mysqli_num_rows($result) > 0) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                  echo "<tr>";
+                  echo "<td>" . $row['id'] . "</td>";
+                  echo "<td>" . $row['company'] . "</td>";
+                  echo "<td>" . $row['title'] . "</td>";
+                  echo "<td>" . $row['description'] . "</td>";
+                  echo "<td>" . $row['location'] . "</td>";
+                  echo "<td>" . $row['salary'] . "</td>";
+                  echo "<td>" . $row['type'] . "</td>";
+                  echo "<td>" . $row['deadline'] . "</td>";
+                  echo "<td><a href='./php/delete_job.php?job_id=" . $row['id'] . "' class='btn btn-danger'>Delete</a></td>";
+                  echo "</tr>";
+                }
+              }
 
-        
-
+            ?>
+          </tbody>
+        </table>
+      </div>
       </div>
       <!-- Footer Start -->
       <footer class="w-100">
