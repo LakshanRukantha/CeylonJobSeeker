@@ -9,6 +9,7 @@ $toastClass = isset($_SESSION['toastClass']) ? $_SESSION['toastClass'] : "";
 unset($_SESSION['toastMessage']);
 unset($_SESSION['toastClass']);
 
+// For debug purposes
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 ?>
@@ -135,6 +136,35 @@ error_reporting(E_ALL);
               ></div>
             </form>
             <!-- Add New Admin End -->
+            <h2 class="section-title">Current <span>Admins</span></h2>
+            <div class="admins-list">
+            <table class="table table-hover table-striped">
+            <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Name</th>
+              <th scope="col">Username</th>
+              <th scope="col">Created At</th>
+            </tr>
+          </thead>
+          <tbody class="table-group-divider">
+          <?php
+              $get_admin = "SELECT * FROM admins";
+              $admins = mysqli_query($conn, $get_admin);
+              if (mysqli_num_rows($admins) > 0) {
+                while ($row = mysqli_fetch_assoc($admins)) {
+                  echo "<tr>";
+                  echo "<td>" . $row['id'] . "</td>";
+                  echo "<td>" . $row['name'] . "</td>";
+                  echo "<td>" . $row['username'] . "</td>";
+                  echo "<td>" . date("d F, Y h:i A", strtotime($row['created_at'])) . "</td>";
+                  echo "</tr>";
+                }
+              }
+            ?>
+          </tbody>
+            </table>
+            </div>
           </div>
           <div class="col-12 col-lg-6">
             <!-- Section: New Job Start -->
@@ -237,8 +267,8 @@ error_reporting(E_ALL);
             <!-- Section: New Job End -->
           </div>
         </div>
+        <h2 class="section-title">Job <span>Dashboard</span></h2>
       <div class="col-12 job-listing-dashboard">
-      <h2 class="section-title">Job <span>Dashboard</span></h2>
         <table class="table table-hover table-striped">
           <thead>
             <tr>
@@ -268,12 +298,12 @@ error_reporting(E_ALL);
                   echo "<td>" . $row['salary'] . "</td>";
                   echo "<td>" . $row['type'] . "</td>";
                   echo "<td>" . $row['deadline'] . "</td>";
-                  echo "<td><a href='./php/delete_job.php?job_id=" . $row['id'] . "' class='btn btn-danger'>Delete</a></td>";
+                  echo "<td class='dashboard-action-btns'><a href='./php/delete_job.php?job_id=" . $row['id'] . "' class='btn btn-danger'><i class='fa-solid fa-trash'></i></a><a href='./php/update_job.php?job_id=" . $row['id'] . "' class='btn btn-secondary'><i class='fa-solid fa-pen-to-square'></i></a></td>";
                   echo "</tr>";
                 }
               }
 
-            ?>
+              ?>
           </tbody>
         </table>
       </div>
@@ -283,15 +313,15 @@ error_reporting(E_ALL);
         <div class="footer">
           <div class="footer-section flex-grow-1 mb-3">
             <a class="brand-text" href="index.html"
-              ><img
-                class="img-logo"
-                src="./assets/images/logo-light.svg"
-                alt="CJS Logo"
-              />CeylonJobSeeker</a
+            ><img
+            class="img-logo"
+            src="./assets/images/logo-light.svg"
+            alt="CJS Logo"
+            />CeylonJobSeeker</a
             >
             <div class="site-info">
               <span
-                >Designed and developed by Software Engineering
+              >Designed and developed by Software Engineering
                 Undergraduates</span
               >
               <span
