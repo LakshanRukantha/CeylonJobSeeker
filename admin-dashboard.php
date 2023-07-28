@@ -214,11 +214,11 @@ error_reporting(E_ALL);
                 <label for="jobType" class="form-label">Job Type</label>
                 <select class="form-select" id="jobType" name="jobType">
                   <option selected>Select Job Type</option>
-                  <option value="full_time">Full Time</option>
-                  <option value="part_time">Part Time</option>
-                  <option value="contract">Contract</option>
-                  <option value="internship">Internship</option>
-                  <option value="temporary">Temporary</option>
+                  <option value="Full Time">Full Time</option>
+                  <option value="Part Time">Part Time</option>
+                  <option value="Contract">Contract</option>
+                  <option value="Internship">Internship</option>
+                  <option value="Temporary">Temporary</option>
                 </select>
               </div>
               <div class="mb-3">
@@ -238,6 +238,7 @@ error_reporting(E_ALL);
           </div>
         </div>
       <div class="col-12 job-listing-dashboard">
+      <h2 class="section-title">Job <span>Dashboard</span></h2>
         <table class="table table-hover table-striped">
           <thead>
             <tr>
@@ -246,7 +247,7 @@ error_reporting(E_ALL);
               <th scope="col">Job Title</th>
               <th scope="col">Description</th>
               <th scope="col">Job Location</th>
-              <th scope="col">Job Salary</th>
+              <th scope="col">Salary</th>
               <th scope="col">Job Type</th>
               <th scope="col">Deadline</th>
               <th scope="col">Action</th>
