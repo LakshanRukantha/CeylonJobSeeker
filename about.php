@@ -341,7 +341,7 @@
                 </div>
                 <div class="media-buttons">
                   <a
-                    href="#"
+                    href="https://github.com/dannangoda"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="btn-github link"
@@ -350,7 +350,7 @@
                     <i class="fa-brands fa-github"></i>
                   </a>
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/in/supuni-madushani-531aa1254"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="btn-linkedin link"
@@ -359,7 +359,7 @@
                     <i class="fa-brands fa-linkedin"></i>
                   </a>
                   <a
-                    href="#"
+                    href="https://www.facebook.com/profile.php?id=100069099803412"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="btn-facebook link"
@@ -368,7 +368,7 @@
                     <i class="fa-brands fa-facebook"></i>
                   </a>
                   <a
-                    href="#"
+                    href="https://instagram.com/_____supuni______"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="btn-instagram link"
