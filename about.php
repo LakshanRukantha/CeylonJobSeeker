@@ -201,21 +201,21 @@
               <div class="profile-card">
                 <div class="image">
                   <img
-                    src="./assets/images/about/developers/profile.png"
-                    alt=""
+                    src="./assets/images/about/developers/ravindu-ranasinghe.jpg"
+                    alt="Ravindu Ranasinghe"
                     class="profile-img"
                   />
                 </div>
                 <div class="text-data">
                   <h1 class="bg-code-tag">&lt;/&gt;</h1>
-                  <span class="name">Lakshan Rukantha</span>
+                  <span class="name">Ravindu Ranasinghe</span>
                   <span class="sub-title"
                     >BSc (Hons) In Software Engineering</span
                   >
                 </div>
                 <div class="media-buttons">
                   <a
-                    href="#"
+                    href="https://github.com/KumudithaRanasinghe"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="btn-github link"
@@ -224,7 +224,7 @@
                     <i class="fa-brands fa-github"></i>
                   </a>
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/in/ravindu-ranasinghe-078a23254"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="btn-linkedin link"
@@ -233,7 +233,7 @@
                     <i class="fa-brands fa-linkedin"></i>
                   </a>
                   <a
-                    href="#"
+                    href="https://www.facebook.com/kumuditha.ranasinhge.5"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="btn-facebook link"
@@ -242,7 +242,7 @@
                     <i class="fa-brands fa-facebook"></i>
                   </a>
                   <a
-                    href="#"
+                    href="https://instagram.com/_shadow_.r_"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="btn-instagram link"
@@ -278,7 +278,7 @@
                 </div>
                 <div class="media-buttons">
                   <a
-                    href="#"
+                    href="https://github.com/SandunSandeepa"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="btn-github link"
@@ -287,7 +287,7 @@
                     <i class="fa-brands fa-github"></i>
                   </a>
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/in/sandun-sandeepa-9889b0254/"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="btn-linkedin link"
@@ -296,7 +296,7 @@
                     <i class="fa-brands fa-linkedin"></i>
                   </a>
                   <a
-                    href="#"
+                    href="https://web.facebook.com/sandun.sandeepa.712/"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="btn-facebook link"
@@ -305,7 +305,7 @@
                     <i class="fa-brands fa-facebook"></i>
                   </a>
                   <a
-                    href="#"
+                    href="https://www.instagram.com/sandun_mgss/"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="btn-instagram link"
@@ -530,7 +530,7 @@
                 </div>
                 <div class="media-buttons">
                   <a
-                    href="#"
+                    href="https://github.com/wmajanu"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="btn-github link"
@@ -539,7 +539,7 @@
                     <i class="fa-brands fa-github"></i>
                   </a>
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/in/ayodhya-j-weerabahu/"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="btn-linkedin link"
@@ -548,7 +548,7 @@
                     <i class="fa-brands fa-linkedin"></i>
                   </a>
                   <a
-                    href="#"
+                    href="https://web.facebook.com/profile.php?id=100086067122976"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="btn-facebook link"
@@ -557,7 +557,7 @@
                     <i class="fa-brands fa-facebook"></i>
                   </a>
                   <a
-                    href="#"
+                    href="https://www.instagram.com/janu_ayo"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="btn-instagram link"
