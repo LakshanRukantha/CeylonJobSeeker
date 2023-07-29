@@ -1,13 +1,124 @@
 .landing-section {
-  background-color: burlywood;
+  min-height: 85vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .left-wrapper {
-  background-color: cadetblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
   padding: 1rem;
 }
 
+.hero-title {
+  font-size: 2rem;
+  border-left: 6px solid var(--secondary-color);
+  padding-left: 0.5rem;
+  color: var(--text-primary-color);
+}
+
+.hero-title span {
+  font-weight: 800;
+  color: var(--text-secondary-color);
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  color: var(--text-secondary-color);
+  margin-top: 1rem;
+}
+
+.hero-taglines {
+  display: flex;
+  align-self: center;
+  width: 100%;
+  flex-wrap: nowrap;
+  margin-top: 1rem;
+  gap: 1rem;
+  text-align: center;
+}
+
+.hero-taglines h6 {
+  display: flex;
+  flex: 1;
+  transition: background-color 0.2s ease-in-out;
+  font-size: 0.7rem;
+  padding: 0.8rem;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary-color);
+  background-color: var(--bg-shade-blue);
+  border-radius: 0.4rem;
+  flex-direction: column;
+}
+
+.hero-taglines h6:hover {
+  background-color: var(--bg-shade-blue-hover);
+}
+
 .right-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 1rem;
-  background-color: yellowgreen;
+}
+
+.scroll-to-bottom {
+  text-decoration: none;
+}
+
+.scroll-text {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  color: var(--text-secondary-color);
+  text-align: center;
+  position: relative;
+  top: -1rem;
+}
+
+@media screen and (min-width: 576px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .left-wrapper {
+    margin-top: 1.5rem;
+  }
+  .hero-taglines h6 {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+  .left-wrapper {
+    margin-top: 1rem;
+  }
+  .hero-taglines h6 {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .left-wrapper {
+    margin-top: 0rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .scroll-text {
+    top: -2rem;
+  }
 }
