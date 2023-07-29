@@ -173,6 +173,7 @@ error_reporting(E_ALL);
               class="form"
               id="jobPostForm"
               method="post"
+              enctype="multipart/form-data"
               action="./php/add_new_job_as_admin.php"
             >
               <div class="mb-3">
@@ -183,6 +184,17 @@ error_reporting(E_ALL);
                   id="companyName"
                   name="companyName"
                   placeholder="Enter Company Name..."
+                />
+              </div>
+              <div class="mb-3">
+                <label for="jobTitle" class="form-label">Company Logo</label>
+                <input 
+                type="file" 
+                class="form-control" 
+                name="companyLogo" 
+                id="companyLogo"
+                accept="image/*"
+                required
                 />
               </div>
               <div class="mb-3">

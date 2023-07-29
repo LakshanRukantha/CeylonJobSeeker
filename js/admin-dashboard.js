@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     event.preventDefault();
 
     const companyName = document.getElementById("companyName").value;
+    const companyLogo = document.getElementById("companyLogo");
     const jobTitle = document.getElementById("jobTitle").value;
     const jobDescription = document.getElementById("jobDescription").value;
     const jobCategory = document.getElementById("jobCategory").value;
@@ -20,6 +21,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // Check if any of the required fields are empty
     if (!companyName.trim()) {
       postJobErrorMessage("Company Name is required.");
+      return;
+    } else if (companyLogo.files.length === 0) {
+      postJobErrorMessage("Company Logo is required.");
       return;
     } else if (!jobTitle.trim()) {
       postJobErrorMessage("Job Title is required.");

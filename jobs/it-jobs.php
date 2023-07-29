@@ -109,7 +109,7 @@ $varshow = $conn->query($sql);
             <div class="company-image">
               <img
                 class="img-fluid"
-                src="../assets/images/google.png"
+                src="<?php echo $row["logo"]; ?>"
                 alt="Company Image"
               />
             </div>
