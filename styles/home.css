@@ -17,8 +17,8 @@
 
 .hero-title {
   font-size: 2rem;
-  border-left: 6px solid var(--secondary-color);
-  padding-left: 0.5rem;
+  border-left: 0rem;
+  padding-left: 0rem;
   color: var(--text-primary-color);
 }
 
@@ -114,6 +114,10 @@
 @media screen and (min-width: 992px) {
   .left-wrapper {
     margin-top: 0rem;
+  }
+  .hero-title {
+    border-left: 6px solid var(--secondary-color);
+    padding-left: 1rem;
   }
 }
 
