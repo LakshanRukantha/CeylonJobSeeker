@@ -1,3 +1,5 @@
+/* Hero Section Start */
+
 .landing-section {
   min-height: 85vh;
   display: flex;
@@ -87,7 +89,10 @@
   top: -1rem;
 }
 
+/* Hero Section End */
+
 @media screen and (min-width: 576px) {
+  /* Hero Section Start */
   .hero-title {
     font-size: 2.5rem;
   }
@@ -97,9 +102,11 @@
   .hero-taglines h6 {
     font-size: 0.8rem;
   }
+  /* Hero Section End */
 }
 
 @media screen and (min-width: 768px) {
+  /* Hero Section Start */
   .hero-title {
     font-size: 3rem;
   }
@@ -109,9 +116,11 @@
   .hero-taglines h6 {
     font-size: 1rem;
   }
+  /* Hero Section End */
 }
 
 @media screen and (min-width: 992px) {
+  /* Hero Section Start */
   .left-wrapper {
     margin-top: 0rem;
   }
@@ -119,10 +128,13 @@
     border-left: 6px solid var(--secondary-color);
     padding-left: 1rem;
   }
+  /* Hero Section End */
 }
 
 @media screen and (min-width: 1200px) {
+  /* Hero Section Start */
   .scroll-text {
     top: -2rem;
   }
+  /* Hero Section End */
 }

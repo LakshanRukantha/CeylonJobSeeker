@@ -404,7 +404,7 @@
                 </div>
                 <div class="media-buttons">
                   <a
-                    href="#"
+                    href="https://github.com/thilakshanadilshan"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="btn-github link"
@@ -413,7 +413,7 @@
                     <i class="fa-brands fa-github"></i>
                   </a>
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/in/thilakshana-dilshan-011a98254"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="btn-linkedin link"
@@ -422,7 +422,7 @@
                     <i class="fa-brands fa-linkedin"></i>
                   </a>
                   <a
-                    href="#"
+                    href="https://facebook.com/profile.php?id=100070157588787"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="btn-facebook link"
@@ -431,7 +431,7 @@
                     <i class="fa-brands fa-facebook"></i>
                   </a>
                   <a
-                    href="#"
+                    href="https://www.instagram.com/_.di_.l_.sha_.n_/"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="btn-instagram link"
