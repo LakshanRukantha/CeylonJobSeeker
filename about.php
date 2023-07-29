@@ -579,21 +579,21 @@
               <div class="profile-card">
                 <div class="image">
                   <img
-                    src="./assets/images/about/developers/profile.png"
-                    alt=""
+                    src="./assets/images/about/developers/lakshan-dulhara.jpg"
+                    alt="Lakshan Dulhara"
                     class="profile-img"
                   />
                 </div>
                 <div class="text-data">
                   <h1 class="bg-code-tag">&lt;/&gt;</h1>
-                  <span class="name">Lakshan Rukantha</span>
+                  <span class="name">Lakshan Dulhara</span>
                   <span class="sub-title"
                     >BSc (Hons) In Software Engineering</span
                   >
                 </div>
                 <div class="media-buttons">
                   <a
-                    href="#"
+                    href="https://github.com/dulhara19"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="btn-github link"
@@ -602,7 +602,7 @@
                     <i class="fa-brands fa-github"></i>
                   </a>
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/in/dulhara-w-923178162"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="btn-linkedin link"
@@ -611,7 +611,7 @@
                     <i class="fa-brands fa-linkedin"></i>
                   </a>
                   <a
-                    href="#"
+                    href="https://www.facebook.com/lakshandulhara.kaluthotage"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="btn-facebook link"
