@@ -59,7 +59,7 @@
                 <a class="nav-link" href="about.html">About Us</a>
               </li>
             </ul>
-            <a href="./admin-login.html"
+            <a href="./admin-login.php"
               ><button class="btn-primary" type="button">
                 Login As Admin
               </button></a

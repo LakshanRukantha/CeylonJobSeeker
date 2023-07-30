@@ -5,13 +5,27 @@ session_start();
 $toastMessage = isset($_SESSION['toastMessage']) ? $_SESSION['toastMessage'] : "";
 $toastClass = isset($_SESSION['toastClass']) ? $_SESSION['toastClass'] : "";
 
-// Clear the session variables for new messages
+// Clear the session variables
 unset($_SESSION['toastMessage']);
 unset($_SESSION['toastClass']);
 
 // For debug purposes
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
+
+// Check if the user is logged in as admin
+if (!isset($_SESSION['isAdmin']) || $_SESSION['isAdmin'] !== true) {
+    $toastMessage = "You are not logged in. Please login first.";
+    $toastClass = "alert alert-danger mb-4";
+    $_SESSION['toastMessage'] = $toastMessage;
+    $_SESSION['toastClass'] = $toastClass;
+
+    header("Location: admin-login.php");
+    exit;
+}
+
+include("./php/admin-details.php");
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -75,81 +89,82 @@ error_reporting(E_ALL);
                 <a class="nav-link" href="about.html">About Us</a>
               </li>
             </ul>
-            <button class="btn btn-light" type="button">Logout</button>
+            <a href='./php/admin_logout.php'>
+                <button class="btn btn-light" type="button">Logout</button>
+            </a>
+
           </div>
         </div>
       </nav>
       <!-- Navbar End -->
       <div class="container section-wrapper">
         <?php
-              echo("<div id='submitStatusArea' class='$toastClass' role='alert'>
-              $toastMessage
-              </div>");
-              ?>
+          echo("<div id='submitStatusArea' class='$toastClass' role='alert'>
+          $toastMessage
+          </div>");
+        ?>
         <div class="row create-section">
           <div class="col-12 col-lg-6">
-            <!-- Add New Admin Start -->
-            <h2 class="section-title">Add New <span>Admin</span></h2>
-            <form
-              class="form"
-              id="addNewAdminForm"
-              action="./php/add_new_admin.php"
-              method="post"
-            >
-              <div class="mb-3">
-                <label for="adminName" class="form-label">Full Name</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="adminName"
-                  name="adminName"
-                  placeholder="Enter Admin Name..."
-                />
-              </div>
-              <div class="mb-3">
-                <label for="username" class="form-label">Username</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="username"
-                  name="username"
-                  placeholder="Enter Username..."
-                />
-              </div>
-              <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  id="password"
-                  name="password"
-                  placeholder="Enter Password..."
-                />
-              </div>
-              <button type="submit" class="btn-primary w-100 mt-3">
-                Create Admin
-              </button>
-              <div
-                id="addAdminAlertMessageArea"
-                class="mt-4"
-                role="alert"
-              ></div>
-            </form>
-            <!-- Add New Admin End -->
-            <h2 class="section-title">Current <span>Admins</span></h2>
+            <!-- Section: Verified Admins Start -->
+            <h2 class="section-title"><i class="fa-solid fa-certificate fa-xs" style="color: #1da1f2;"></i> Verified <span>Admins</span></h2>
             <div class="admins-list">
             <table class="table table-hover table-striped">
             <thead>
-            <tr>
-              <th scope="col">ID</th>
-              <th scope="col">Name</th>
-              <th scope="col">Username</th>
-              <th scope="col">Created At</th>
-            </tr>
-          </thead>
-          <tbody class="table-group-divider">
-          <?php
-              $get_admin = "SELECT * FROM admins";
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Username</th>
+                <th scope="col">Created At</th>
+                <?php
+                if (($current_active_admin['master_admin'] == 1)) {
+                  echo '<th scope="col">Actions</th>';
+                }
+                ?>
+              </tr>
+            </thead>
+            <tbody class="table-group-divider">
+              <?php
+              $get_admin = "SELECT * FROM admins WHERE is_verified = 1";
+              $admins = mysqli_query($conn, $get_admin);
+              if (mysqli_num_rows($admins) > 0) {
+                while ($row = mysqli_fetch_assoc($admins)) {
+                  echo "<tr>";
+                  echo "<td>" . $row['id'] . "</td>";
+                  echo "<td>" . $row['name'] . "</td>";
+                  echo "<td>" . $row['username'] . (($row['master_admin'] == 1) ? "<i class='mx-1 fa-solid fa-bolt'></i>" : "") . "</td>";
+                  echo "<td>" . date("d F, Y", strtotime($row['created_at'])) . "</td>";
+                  if (($current_active_admin['master_admin'] == 1)) {
+                    // Display action buttons for master admin
+                    echo "<td><a href='./php/delete_admin.php?id=" . $row['id'] . "' class='btn btn-danger'><i class='fa-solid fa-trash'></i></a></td>";
+                  }
+                  echo "</tr>";
+                }
+              }
+              ?>
+            </tbody>
+          </table>
+            </div>
+            <!-- Section: Verified Admins End -->
+            <!-- Pending Admins Start -->
+            <h2 class="section-title"><i class="fa-solid fa-list fa-xs" style="color: #1da1f2;"></i> Pending <span>Admins</span></h2>
+            <div class="admins-list">
+            <table class="table table-hover table-striped">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Username</th>
+                <th scope="col">Created At</th>
+                <?php
+                if (($current_active_admin['master_admin'] == 1)) {
+                  echo '<th scope="col">Actions</th>';
+                }
+                ?>
+              </tr>
+            </thead>
+            <tbody class="table-group-divider">
+              <?php
+              $get_admin = "SELECT * FROM admins WHERE is_verified = 0";
               $admins = mysqli_query($conn, $get_admin);
               if (mysqli_num_rows($admins) > 0) {
                 while ($row = mysqli_fetch_assoc($admins)) {
@@ -157,14 +172,20 @@ error_reporting(E_ALL);
                   echo "<td>" . $row['id'] . "</td>";
                   echo "<td>" . $row['name'] . "</td>";
                   echo "<td>" . $row['username'] . "</td>";
-                  echo "<td>" . date("d F, Y h:i A", strtotime($row['created_at'])) . "</td>";
+                  echo "<td>" . date("d F, Y H:i", strtotime($row['created_at'])) . "</td>";
+                  if (($current_active_admin['master_admin'] == 1)) {
+                    // Display action buttons for master admin
+                    echo "<td class='dashboard-action-btns'><a href='./php/verify_admin.php?id=" . $row['id'] . "' class='btn btn-primary'><i class='fa-solid fa-user-plus'></i></a> <a href='./php/delete_admin.php?id=" . $row['id'] . "' class='btn btn-danger'>
+                    <i class='fa-solid fa-trash'></i></a></td>";
+                  }
                   echo "</tr>";
                 }
               }
-            ?>
-          </tbody>
-            </table>
+              ?>
+            </tbody>
+          </table>
             </div>
+            <!-- Pending Admins End -->
           </div>
           <div class="col-12 col-lg-6">
             <!-- Section: New Job Start -->
