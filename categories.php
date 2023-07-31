@@ -19,7 +19,7 @@
       <?php include_once "./components/navbar.php"; ?>
       <!-- Hero Section Start -->
       <div class="container mt-5">
-        <h2 class="section-title">Job Categories</h2>
+        <h2 class="section-title">Job <span>Categories</span></h2>
       </div>
       
         <!-- cards section start -->
@@ -71,7 +71,7 @@
                 <li>Advertising Coordinator</li>
                 <li>Brand Manager</li>
             </div>
-              <a href="jobs/marketting-jobs.php" class="btn btn-primary">Explore jobs</a> 
+              <a href="jobs/marketing-jobs.php" class="btn btn-primary">Explore jobs</a> 
           </div>
           <div class="card col-md-4 col-lg-12"> 
             <div class="icon">
