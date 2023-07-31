@@ -108,7 +108,7 @@ $isAdmin = isset($_SESSION['isAdmin']) ? $_SESSION['isAdmin'] : "";
                     <div class="mini-card-wrapper">
                     <i class="fa-solid fa-clock"></i>
                     <h6>Deadline</h6>
-                    <span><?php echo date("d F, Y", strtotime($row["deadline"])); ?></span>
+                    <span><?php echo date("jS F", strtotime($row["deadline"])); ?></span>
                     </div>
                   </div>
                  <div class="modal-body-text-wrapper">
