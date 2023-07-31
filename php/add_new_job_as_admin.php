@@ -1,6 +1,7 @@
 <?php
 // DB Connection
 include("../config/config.php");
+include("../php/random_string.php");
 
 $toastMessage = "";
 $toastClass = "";
@@ -37,7 +38,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         // Handle the company logo file upload
         $targetDir = "../assets/images/uploads"; // Specify the directory where the images will be stored
-        $targetFile = $targetDir . "/" . basename($_FILES["companyLogo"]["name"]);
+        $randomString = generateRandomString(10); // Generate random string for filename
+        $targetFile = $targetDir . "/" . pathinfo($_FILES["companyLogo"]["name"], PATHINFO_FILENAME) . "-" . $randomString . ".png";
         $uploadOk = 1;
         $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
 
@@ -81,22 +83,30 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $toastMessage = "Sorry, your file was not uploaded.";
             $toastClass = "alert alert-danger mb-4";
         } else {
-            // If everything is okay, try to upload the file
+            // If everything is okay & upload the file
             if (move_uploaded_file($_FILES["companyLogo"]["tmp_name"], $targetFile)) {
-                // The file has been uploaded successfully. Insert the data into the database.
-                $companyLogo = $targetFile; // Save the file path in the database or use it as per your requirement
+                $companyLogo = $targetFile; // Save the file path
 
-                // Insert the data into the database with $companyLogo as the file path
                 $sql = "INSERT INTO jobs (company, logo, title, description, category_id, location, salary, type, deadline, post_date) 
-                        VALUES ('$companyName', '$companyLogo', '$jobTitle', '$jobDescription', '$jobCategory', '$jobLocation', $jobSalary, '$jobType', '$jobDeadline', NOW())";
+                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, NOW())";
 
-                if ($conn->query($sql) === TRUE) {
+                // Create a prepared statement
+                $stmt = $conn->prepare($sql);
+
+                // Bind the parameters with the actual data
+                $stmt->bind_param("ssssssdss", $companyName, $companyLogo, $jobTitle, $jobDescription, $jobCategory, $jobLocation, $jobSalary, $jobType, $jobDeadline);
+
+                // Execute the statement
+                if ($stmt->execute()) {
                     $toastMessage = "Data inserted successfully!";
                     $toastClass = "alert alert-success mb-4";
                 } else {
-                    $toastMessage = "Error: " . $sql . "<br>" . $conn->error;
+                    $toastMessage = "Error: " . $sql . "<br>" . $stmt->error;
                     $toastClass = "alert alert-danger mb-4";
                 }
+
+                // Close the statement
+                $stmt->close();
             } else {
                 $toastMessage = "Sorry, there was an error uploading your file.";
                 $toastClass = "alert alert-danger mb-4";
