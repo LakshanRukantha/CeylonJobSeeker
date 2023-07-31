@@ -151,20 +151,38 @@ $isAdmin = isset($_SESSION['isAdmin']) ? $_SESSION['isAdmin'] : "";
 
            <!-- Modal -->
            <div class="modal fade" id="staticBackdrop<?php echo $row["id"]; ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-             <div class="modal-dialog modal-dialog-centered">
+             <div class="modal-dialog modal-dialog-scrollable">
                <div class="modal-content">
                  <div class="modal-header">
                    <h1 class="modal-title fs-5" id="staticBackdropLabel"><?php echo $row["title"]; ?></h1>
                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                  </div>
                  <div class="modal-body">
-                  <b>Company:</b>  <?php echo $row["company"]; ?><br>
-                  <b>Location:</b>	<?php echo $row["location"]; ?><br>
-                  <b>Job Title:</b>	<?php echo $row["title"]; ?><br>
-                  <b>Job Type:</b> <?php echo $row["type"]; ?><br>
-                  <b>Job Salary:</b>	<?php echo $row["salary"]; ?><br>
-                  <b>Deadline:</b>	<?php echo $row["deadline"]; ?><br>
-                  
+                  <div class="modal-header-cards">
+                    <div class="mini-card-wrapper">
+                    <i class="fa-solid fa-sack-dollar"></i>
+                    <h6>Salary</h6>
+                    <span>$<?php echo $row["salary"]; ?></span>
+                    </div>
+                    <div class="mini-card-wrapper">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h6>Location</h6>
+                    <span><?php echo $row["location"]; ?></span>
+                    </div>
+                    <div class="mini-card-wrapper">
+                    <i class="fa-solid fa-clock"></i>
+                    <h6>Deadline</h6>
+                    <span><?php echo date("d F, Y", strtotime($row["deadline"])); ?></span>
+                    </div>
+                  </div>
+                 <div class="modal-body-text-wrapper">
+                 <p class="modal-body-text"><span>Company:</span> <?php echo($row['company']); ?></p>
+                 <p class="modal-body-text"><span>Job Type:</span> <?php echo($row['type']); ?></p>
+                 <p class="modal-body-text"><span>Description:</span> <?php echo($row['description']); ?></p>
+                 </div>
+                 <div class="modal-body-bottom-wrapper">
+                  <p>Published On <span><?php echo date("d F, Y h:i A", strtotime($row["post_date"])); ?></span></p>
+                 </div>
                  </div>
                  <div class="modal-footer">
                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -172,30 +190,16 @@ $isAdmin = isset($_SESSION['isAdmin']) ? $_SESSION['isAdmin'] : "";
                  </div>
                </div>
              </div>
-           </div>          
-
-
-
-
+           </div>   
+          <!-- Modal End -->
         </div>
       </div>
-      
-     
     </div>
       <!-- Job Card End -->
-
-
-
       <?php
       }
-
      ?>
-      
      </div>
-
-
-
-
      </div>
 
 

@@ -166,3 +166,81 @@
   font-size: 1.2rem;
   color: var(--text-secondary-color);
 }
+
+.modal-header-cards {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.4rem;
+}
+
+.mini-card-wrapper:nth-child(1):hover,
+.mini-card-wrapper:nth-child(2):hover,
+.mini-card-wrapper:nth-child(3):hover {
+  background-color: var(--secondary-color-shade);
+  border: 1px solid var(--secondary-color);
+  color: var(--text-primary-color);
+}
+
+.mini-card-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  transition: background-color 0.2s ease-in-out, border 0.2s ease-in-out,
+    color 0.3s ease-in-out;
+  padding: 1rem 0.25rem;
+  border-radius: 0.5rem;
+  background-color: var(--bg-shade-blue);
+  flex-wrap: nowrap;
+  flex-direction: column;
+  gap: 0.2rem;
+  flex: 1;
+}
+
+.mini-card-wrapper h6 {
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: 0.7rem;
+}
+
+.mini-card-wrapper span {
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.modal-body-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  margin-top: 1rem;
+}
+
+.modal-body-text {
+  margin-bottom: 0.5rem;
+}
+
+.modal-body-text span {
+  font-weight: 500;
+}
+
+.modal-body-bottom-wrapper p {
+  margin-bottom: 0rem;
+  font-weight: 500;
+}
+
+.modal-body-bottom-wrapper span {
+  font-style: italic;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 576px) {
+  .mini-card-wrapper h6 {
+    font-size: 0.9rem;
+  }
+
+  .mini-card-wrapper span {
+    font-size: 0.8rem;
+  }
+}
