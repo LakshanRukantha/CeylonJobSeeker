@@ -1,6 +1,5 @@
 <?php
-include("./config/config.php");
-session_start();
+include("../config/config.php");
 
 $isAdmin = isset($_SESSION['isAdmin']) ? $_SESSION['isAdmin'] : "";
 
@@ -11,7 +10,7 @@ $isAdmin = isset($_SESSION['isAdmin']) ? $_SESSION['isAdmin'] : "";
           <a class="navbar-brand" href="index.html"
             ><img
               class="img-logo"
-              src="./assets/images/logo.svg"
+              src="../assets/images/logo.svg"
               alt="CJS Logo"
           /></a>
           <button
@@ -36,39 +35,39 @@ $isAdmin = isset($_SESSION['isAdmin']) ? $_SESSION['isAdmin'] : "";
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./categories.php">Categories</a>
+                <a class="nav-link" href="../categories.php">Categories</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./faq.php">FAQ</a>
+                <a class="nav-link" href="../faq.php">FAQ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./contact.php">Contact Us</a>
+                <a class="nav-link" href="../contact.php">Contact Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./about.php">About Us</a>
+                <a class="nav-link" href="../about.php">About Us</a>
               </li>
             </ul>
             <div>
             <?php
               if ($isAdmin) {
                   echo ("
-                      <a href='admin-dashboard.php'>
+                      <a href='../admin-dashboard.php'>
                           <button class='btn btn-primary' type='button'>
                               Dashboard
                           </button>
                       </a>
-                      <a href='./php/admin_logout.php'>
+                      <a href='../php/admin_logout.php'>
                           <button class='btn btn-outline-secondary'>Logout</button>
                       </a>
                   ");
               } else {
                   echo ("
-                      <a href='admin-register.php'>
+                      <a href='../admin-register.php'>
                           <button class='btn btn-primary' type='button'>
                               Register
                           </button>
                       </a>
-                      <a class='mx-1' href='admin-login.php'>
+                      <a class='mx-1' href='../admin-login.php'>
                           <button class='btn btn-outline-primary' type='button'>
                               Login
                           </button>

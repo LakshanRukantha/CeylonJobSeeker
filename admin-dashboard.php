@@ -90,7 +90,7 @@ include("./php/admin-details.php");
               </li>
             </ul>
             <a href='./php/admin_logout.php'>
-                <button class="btn btn-light" type="button">Logout</button>
+                <button class="btn btn-outline-secondary" type="button">Logout</button>
             </a>
 
           </div>
