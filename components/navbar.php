@@ -1,4 +1,10 @@
+<?php
+include("./config/config.php");
+session_start();
 
+$isAdmin = isset($_SESSION['isAdmin']) ? $_SESSION['isAdmin'] : "";
+
+?>
       <!-- Navbar Start -->
       <nav class="navbar navbar-expand-lg fixed-top w-full bg-body-tertiary">
         <div class="container-fluid px-lg-4">
@@ -43,16 +49,23 @@
               </li>
             </ul>
             <div>
-            <a href="admin-register.php"
-              ><button class="btn btn-primary" type="button">
+            <?php
+            if($isAdmin) {
+              echo("<a href='./php/admin_logout.php' class='btn btn-light'>Logout</a>");
+            } else {
+              echo("<a href='admin-register.php'
+              ><button class='btn btn-primary' type='button'>
                 Register
               </button></a
             >
-            <a class="mx-1" href="admin-login.php"
-              ><button class="btn btn-outline-primary" type="button">
+            <a class='mx-1' href='admin-login.php'
+              ><button class='btn btn-outline-primary' type='button'>
                 Login
               </button></a
-            >
+            >");
+            }
+            ?>
+            
             </div>
           </div>
         </div>

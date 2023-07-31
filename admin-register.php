@@ -53,6 +53,7 @@ if(isset($_SESSION['username'])) {
             id="fullName"
             name="fullName"
             placeholder="Enter Userame..."
+            required
           />
         </div>
         <div class="mb-3">
@@ -63,6 +64,7 @@ if(isset($_SESSION['username'])) {
             id="username"
             name="username"
             placeholder="Enter Userame..."
+            required
           />
         </div>
         <div class="mb-3">
@@ -73,6 +75,7 @@ if(isset($_SESSION['username'])) {
             id="password"
             name="password"
             placeholder="Enter Password..."
+            required
           />
         </div>
         <div class="mb-3">
@@ -85,6 +88,7 @@ if(isset($_SESSION['username'])) {
             id="confirmPassword"
             name="confirmPassword"
             placeholder="Enter Password Again..."
+            required
           />
           <span class="sub-action-text"
             >Already have an account? <a href="admin-login.php">Login</a></span

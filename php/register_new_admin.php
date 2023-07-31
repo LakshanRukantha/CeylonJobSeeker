@@ -30,8 +30,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $toastMessage = "Passwords do not match.";
                 $toastClass = "alert alert-danger mb-4";
             } else {
+                $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
                 // Insert the data into the database
-                $sql = "INSERT INTO admins (name, username, password) VALUES ('$fullName', '$username', '$password')";
+                $sql = "INSERT INTO admins (name, username, password) VALUES ('$fullName', '$username', '$hashedPassword')";
             
                 if ($conn->query($sql) === TRUE) {
                     $toastMessage = "Account created successfully!";
@@ -52,6 +53,6 @@ session_start();
 $_SESSION['toastMessage'] = $toastMessage;
 $_SESSION['toastClass'] = $toastClass;
 
-header("Location: ../admin-register.php");
+header("Location: ../admin-login.php");
 exit;
 ?>

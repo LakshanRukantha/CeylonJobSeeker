@@ -5,6 +5,10 @@ include_once '../config/config.php';
 $sql = "SELECT * FROM jobs WHERE category_id=1";
 $varshow = $conn->query($sql);
 
+session_start();
+
+$isAdmin = isset($_SESSION['isAdmin']) ? $_SESSION['isAdmin'] : "";
+
 ?>
 
 <!DOCTYPE html>
@@ -51,28 +55,41 @@ $varshow = $conn->query($sql);
                 <a
                   class="nav-link active"
                   aria-current="page"
-                  href="./index.html"
+                  href="../index.html"
                   >Home</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="categories.html">Categories</a>
+                <a class="nav-link" href="../categories.php">Categories</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="faq.html">FAQ</a>
+                <a class="nav-link" href="../faq.php">FAQ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
+                <a class="nav-link" href="../contact.php">Contact Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html">About Us</a>
+                <a class="nav-link" href="../about.php">About Us</a>
               </li>
             </ul>
-            <a href="./admin-login.php"
-              ><button class="btn-primary" type="button">
-                Login As Admin
+            <div>
+            <?php
+            if($isAdmin) {
+              echo("<a href='../php/admin_logout.php' class='btn btn-light'>Logout</a>");
+            } else {
+              echo("<a href='../admin-register.php'
+              ><button class='btn btn-primary' type='button'>
+                Register
               </button></a
             >
+            <a class='mx-1' href='../admin-login.php'
+              ><button class='btn btn-outline-primary' type='button'>
+                Login
+              </button></a
+            >");
+            }
+            ?>
+            </div>
           </div>
         </div>
       </nav>

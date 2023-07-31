@@ -22,8 +22,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if (mysqli_num_rows($result) === 1) {
         $admin = mysqli_fetch_assoc($result);
+        $hashedPassword = $admin["password"];
 
-        if ($password === $admin["password"]) {
+        if (password_verify($password, $hashedPassword)) {
             // Check if the admin is verified
             if ($admin["is_verified"] == 1) {
                 // Set session variables for admin validation and username
@@ -37,11 +38,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $toastClass = "alert alert-danger mb-4";
             }
         } else {
-            $toastMessage = "Invalid password. Please try again.";
+            $toastMessage = "Invalid username or password. Please try again.";
             $toastClass = "alert alert-danger mb-4";
         }
     } else {
-        $toastMessage = "Invalid username. Please try again.";
+        $toastMessage = "Invalid username or password. Please try again.";
         $toastClass = "alert alert-danger mb-4";
     }
 }

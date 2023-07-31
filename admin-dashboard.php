@@ -77,16 +77,16 @@ include("./php/admin-details.php");
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="categories.html">Categories</a>
+                <a class="nav-link" href="categories.php">Categories</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="faq.html">FAQ</a>
+                <a class="nav-link" href="faq.php">FAQ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
+                <a class="nav-link" href="contact.php">Contact Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html">About Us</a>
+                <a class="nav-link" href="about.php">About Us</a>
               </li>
             </ul>
             <a href='./php/admin_logout.php'>
@@ -106,7 +106,7 @@ include("./php/admin-details.php");
         <div class="row create-section">
           <div class="col-12 col-lg-6">
             <!-- Section: Verified Admins Start -->
-            <h2 class="section-title"><i class="fa-solid fa-certificate fa-xs" style="color: #1da1f2;"></i> Verified <span>Admins</span></h2>
+            <h2 class="section-title"><i class="fa-solid fa-certificate fa-xs"></i> Verified <span>Admins</span></h2>
             <div class="admins-list">
             <table class="table table-hover table-striped">
             <thead>
@@ -146,7 +146,7 @@ include("./php/admin-details.php");
             </div>
             <!-- Section: Verified Admins End -->
             <!-- Pending Admins Start -->
-            <h2 class="section-title"><i class="fa-solid fa-list fa-xs" style="color: #1da1f2;"></i> Pending <span>Admins</span></h2>
+            <h2 class="section-title"><i class="fa-solid fa-ghost fa-xs"></i> Pending <span>Admins</span></h2>
             <div class="admins-list">
             <table class="table table-hover table-striped">
             <thead>
@@ -175,7 +175,7 @@ include("./php/admin-details.php");
                   echo "<td>" . date("d F, Y H:i", strtotime($row['created_at'])) . "</td>";
                   if (($current_active_admin['master_admin'] == 1)) {
                     // Display action buttons for master admin
-                    echo "<td class='dashboard-action-btns'><a href='./php/verify_admin.php?id=" . $row['id'] . "' class='btn btn-primary'><i class='fa-solid fa-user-plus'></i></a> <a href='./php/delete_admin.php?id=" . $row['id'] . "' class='btn btn-danger'>
+                    echo "<td class='dashboard-action-btns'><a href='./php/verify_admin.php?id=" . $row['id'] . "' class='btn btn-primary'><i class='fa-regular fa-square-check fa-lg'></i></a> <a href='./php/delete_admin.php?id=" . $row['id'] . "' class='btn btn-danger'>
                     <i class='fa-solid fa-trash'></i></a></td>";
                   }
                   echo "</tr>";
@@ -189,7 +189,7 @@ include("./php/admin-details.php");
           </div>
           <div class="col-12 col-lg-6">
             <!-- Section: New Job Start -->
-            <h2 class="section-title mb">Post A <span>New Job</span></h2>
+            <h2 class="section-title mb">Publish A <span>New Job</span></h2>
             <form
               class="form"
               id="jobPostForm"
