@@ -24,7 +24,7 @@
       
         <!-- cards section start -->
         <div class="row">
-          <div class="card col-md-4 col-lg-12"> 
+          <div class="card col-md-4 col-lg-12 border"> 
             <div class="icon">
               <img src="assets\images\category\se.png" alt="Card image cap">
             </div>
@@ -41,7 +41,7 @@
             </div>
               <a href="jobs/it-jobs.php" class="btn btn-primary">Explore jobs</a> 
           </div>
-          <div class="card col-md-4 col-lg-12"> 
+          <div class="card col-md-4 col-lg-12 border"> 
             <div class="icon">
               <img src="assets\images\category\Accounting.png" alt="Card image cap">
             </div>
@@ -57,7 +57,7 @@
             </div>
               <a href="jobs/accounting-jobs.php" class="btn btn-primary">Explore jobs</a> 
           </div>
-          <div class="card col-md-4 col-lg-12"> 
+          <div class="card col-md-4 col-lg-12 border"> 
             <div class="icon">
               <img src="assets\images\category\Marketing.png" alt="Card image cap">
             </div>
@@ -73,7 +73,7 @@
             </div>
               <a href="jobs/marketing-jobs.php" class="btn btn-primary">Explore jobs</a> 
           </div>
-          <div class="card col-md-4 col-lg-12"> 
+          <div class="card col-md-4 col-lg-12 border"> 
             <div class="icon">
               <img src="assets\images\category\Engineering.png" alt="Card image cap">
             </div>
@@ -89,7 +89,7 @@
             </div>
               <a href="jobs/engineering-jobs.php" class="btn btn-primary">Explore jobs</a> 
           </div>
-          <div class="card col-md-4 col-lg-12"> 
+          <div class="card col-md-4 col-lg-12 border"> 
             <div class="icon">
               <img src="assets\images\category\teaching.png" alt="Card image cap">
             </div>
@@ -105,7 +105,7 @@
             </div>
               <a href="jobs/teaching-jobs.php" class="btn btn-primary">Explore jobs</a> 
           </div>
-          <div class="card col-md-4 col-lg-12"> 
+          <div class="card col-md-4 col-lg-12 border"> 
             <div class="icon">
               <img src="assets\images\category\medical.png" alt="Card image cap">
             </div>
@@ -121,7 +121,7 @@
             </div>
               <a href="jobs/medical-jobs.php" class="btn btn-primary">Explore jobs</a> 
           </div>
-          <div class="card col-md-4 col-lg-12"> 
+          <div class="card col-md-4 col-lg-12 border"> 
             <div class="icon">
               <img src="assets\images\category\iss.png" alt="Card image cap">
             </div>
