@@ -50,11 +50,9 @@
 
           <section class="col right">
             <!--  *******   Form Starts   *******  -->
-            <div>
-              <h2 class="section-title">Send Us A <span>Message</span></h2>
-            </div>
             <form class="messageForm">
-              <div class="form-floating mb-3 halfWidth">
+            <h2 class="section-title mb-4">Send Us A <span>Message</span></h2>  
+            <div class="form-floating mb-3 halfWidth">
                 <input
                   type="text"
                   class="form-control"
@@ -113,7 +111,7 @@
           <!--  *******   Title Starts   *******  -->
           <section class="col left">
             <div>
-              <h2 class="section-title">Contact us</h2>
+              <h2 class="section-title">Contact Us</h2>
               <p>
                 <br />If Connect with us and let's bring your vision to life!
                 We're eager to hear your ideas, answer your questions, and work
@@ -142,7 +140,7 @@
                 </div>
                 <div class="details">
                   <span>Email</span>
-                  <span>ceylonjob@gmail.com</span>
+                  <span>support@ceylonjobseeker.com</span>
                 </div>
               </div>
 

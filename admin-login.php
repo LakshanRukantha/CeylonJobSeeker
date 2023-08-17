@@ -57,7 +57,7 @@ if(isset($_SESSION['username'])) {
         <div class="mb-3">
           <label for="adminName" class="form-label">Password</label>
           <input
-            type="text"
+            type="password"
             class="form-control"
             id="password"
             name="password"
@@ -69,7 +69,10 @@ if(isset($_SESSION['username'])) {
             <a href="admin-register.php">Register</a></span
           >
         </div>
-        <button class="btn-primary w-100" type="submit">Login</button>
+        <div class="d-flex gap-3">
+          <a class="btn btn-outline-secondary w-50" href="index.html">Cancel</a>
+          <button class="btn-primary w-50" type="submit">Login</button>
+        </div>
         <span class="secondary-action-text">- Or -</span>
         <button class="btn btn-secondary w-100 icon-button" type="button">
           <i class="fa-brands fa-google"></i>

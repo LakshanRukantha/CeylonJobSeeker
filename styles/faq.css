@@ -1,9 +1,9 @@
 .faq-section {
   position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 2rem;
   width: 100%;
   min-height: 80vh;
   margin-bottom: 2rem;
@@ -12,17 +12,12 @@
 .faq-section-left {
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   flex: 1;
   height: 100%;
   padding: 0 0.3rem;
   min-width: 350px;
-  max-width: 500px;
-}
-
-.faq-image {
-  width: 100%;
+  max-width: 550px;
 }
 
 .faq-section-right {

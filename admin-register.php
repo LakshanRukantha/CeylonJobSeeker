@@ -70,7 +70,7 @@ if(isset($_SESSION['username'])) {
         <div class="mb-3">
           <label for="adminName" class="form-label">Password</label>
           <input
-            type="text"
+            type="password"
             class="form-control"
             id="password"
             name="password"
@@ -83,7 +83,7 @@ if(isset($_SESSION['username'])) {
             >Confirm Password</label
           >
           <input
-            type="text"
+            type="password"
             class="form-control"
             id="confirmPassword"
             name="confirmPassword"
@@ -94,7 +94,10 @@ if(isset($_SESSION['username'])) {
             >Already have an account? <a href="admin-login.php">Login</a></span
           >
         </div>
-        <button class="btn-primary w-100" type="submit">Register</button>
+        <div class="d-flex gap-3">
+          <a class="btn btn-outline-secondary w-50" href="index.html">Cancel</a>
+          <button class="btn-primary w-50" type="submit">Register</button>
+        </div>
       </form>
     </div>
     <!-- Popper - CDN -->

@@ -17,17 +17,17 @@
   <body>
     <div class="main-wrapper">
     <?php include_once "./components/navbar.php"; ?>
-      <div class="container faq-section">
+     <div class="container faq-section mt-4">
         <div class="faq-section-left">
+          <h2 class="section-title">Frequently asked <span>questions</span></h2>
+          <p>Questions you might ask about our Services.</p>
           <img
-            class="faq-image"
+            class="img-fluid"
             src="./assets/images/faq/faq-art.png"
             alt="FAQ Image"
           />
         </div>
         <div class="faq-section-right">
-          <h2>Frequently asked questions</h2>
-          <p>Questions you might ask about our Services.</p>
           <div class="accordion accordion-flush" id="accordionFlushExample">
             <div class="accordion-item">
               <h2 class="accordion-header">
@@ -160,7 +160,7 @@
             don't hesitate to contact our support team at through our contact
             form.
           </p>
-          <button class="btn-primary" type="button">Contact Us</button>
+          <a href="./contact.php"><button class="btn-primary" type="button">Contact Us</button></a>
         </div>
       </div>
        <!-- Footer Start -->
