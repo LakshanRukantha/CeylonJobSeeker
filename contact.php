@@ -50,7 +50,7 @@
 
           <section class="col right">
             <!--  *******   Form Starts   *******  -->
-            <form class="messageForm">
+            <form class="messageForm border rounded shadow-sm p-3">
             <h2 class="section-title mb-4">Send Us A <span>Message</span></h2>  
             <div class="form-floating mb-3 halfWidth">
                 <input
