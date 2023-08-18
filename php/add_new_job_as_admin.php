@@ -9,6 +9,7 @@ $toastClass = "";
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (
         isset($_POST["companyName"]) &&
+        isset($_POST["companyEmail"]) &&
         isset($_FILES["companyLogo"]) &&
         isset($_POST["jobTitle"]) &&
         isset($_POST["jobDescription"]) &&
@@ -20,6 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     ) {
         // Retrieve the form data
         $companyName = $_POST["companyName"];
+        $companyEmail = $_POST["companyEmail"];
         $jobTitle = $_POST["jobTitle"];
         $jobDescription = $_POST["jobDescription"];
         $jobCategory = $_POST["jobCategory"];
@@ -30,6 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         // Validate and sanitize the data
         $companyName = trim($companyName);
+        $companyEmail = trim($companyEmail);
         $jobTitle = trim($jobTitle);
         $jobDescription = trim($jobDescription);
         $jobLocation = trim($jobLocation);
@@ -87,14 +90,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             if (move_uploaded_file($_FILES["companyLogo"]["tmp_name"], $targetFile)) {
                 $companyLogo = $targetFile; // Save the file path
 
-                $sql = "INSERT INTO jobs (company, logo, title, description, category_id, location, salary, type, deadline, post_date) 
-                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, NOW())";
+                $sql = "INSERT INTO jobs (company, email, logo, title, description, category_id, location, salary, type, deadline, post_date) 
+                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW())";
 
                 // Create a prepared statement
                 $stmt = $conn->prepare($sql);
 
                 // Bind the parameters with the actual data
-                $stmt->bind_param("ssssssdss", $companyName, $companyLogo, $jobTitle, $jobDescription, $jobCategory, $jobLocation, $jobSalary, $jobType, $jobDeadline);
+                $stmt->bind_param("sssssssdss", $companyName, $companyEmail, $companyLogo, $jobTitle, $jobDescription, $jobCategory, $jobLocation, $jobSalary, $jobType, $jobDeadline);
 
                 // Execute the statement
                 if ($stmt->execute()) {

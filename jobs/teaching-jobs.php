@@ -122,7 +122,7 @@ $isAdmin = isset($_SESSION['isAdmin']) ? $_SESSION['isAdmin'] : "";
                  </div>
                  <div class="modal-footer">
                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                   <button type="button" class="btn btn-primary">Apply</button>
+                   <a href="mailto:<?php echo($row['email']) ?>" class="btn btn-primary">Apply</a>
                  </div>
                </div>
              </div>

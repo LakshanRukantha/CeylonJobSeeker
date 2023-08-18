@@ -191,14 +191,14 @@ include("./php/admin-details.php");
             <!-- Section: New Job Start -->
             <h2 class="section-title mb">Publish A <span>New Job</span></h2>
             <form
-              class="form"
+              class="form mt-3"
               id="jobPostForm"
               method="post"
               enctype="multipart/form-data"
               action="./php/add_new_job_as_admin.php"
             >
               <div class="mb-3">
-                <label for="jobTitle" class="form-label">Company Name</label>
+                <label for="company-name" class="form-label">Company Name</label>
                 <input
                   type="text"
                   class="form-control"
@@ -208,7 +208,17 @@ include("./php/admin-details.php");
                 />
               </div>
               <div class="mb-3">
-                <label for="jobTitle" class="form-label">Company Logo</label>
+                <label for="company-email" class="form-label">Company Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="companyEmail"
+                  name="companyEmail"
+                  placeholder="Enter Company Email..."
+                />
+              </div>
+              <div class="mb-3">
+                <label for="company-logo" class="form-label">Company Logo</label>
                 <input 
                 type="file" 
                 class="form-control" 
@@ -219,7 +229,7 @@ include("./php/admin-details.php");
                 />
               </div>
               <div class="mb-3">
-                <label for="jobTitle" class="form-label">Job Title</label>
+                <label for="job-title" class="form-label">Job Title</label>
                 <input
                   type="text"
                   class="form-control"
@@ -229,7 +239,7 @@ include("./php/admin-details.php");
                 />
               </div>
               <div class="mb-3">
-                <label for="jobDescription" class="form-label"
+                <label for="job-description" class="form-label"
                   >Job Description</label
                 >
                 <textarea
@@ -241,7 +251,7 @@ include("./php/admin-details.php");
                 ></textarea>
               </div>
               <div class="mb-3">
-                <label for="jobCategory" class="form-label">Job Category</label>
+                <label for="job-category" class="form-label">Job Category</label>
                 <select class="form-select" id="jobCategory" name="jobCategory">
                   <option selected>Select Job Category</option>
                   <option value="1">IT</option>
@@ -254,7 +264,7 @@ include("./php/admin-details.php");
                 </select>
               </div>
               <div class="mb-3">
-                <label for="jobLocation" class="form-label">Job Location</label>
+                <label for="job-location" class="form-label">Job Location</label>
                 <input
                   type="text"
                   class="form-control"
@@ -264,7 +274,7 @@ include("./php/admin-details.php");
                 />
               </div>
               <div class="mb-3">
-                <label for="jobSalary" class="form-label">Job Salary</label>
+                <label for="job-salary" class="form-label">Job Salary</label>
                 <input
                   type="number"
                   class="form-control"
@@ -274,7 +284,7 @@ include("./php/admin-details.php");
                 />
               </div>
               <div class="mb-3">
-                <label for="jobType" class="form-label">Job Type</label>
+                <label for="job-type" class="form-label">Job Type</label>
                 <select class="form-select" id="jobType" name="jobType">
                   <option selected>Select Job Type</option>
                   <option value="Full Time">Full Time</option>
@@ -285,7 +295,7 @@ include("./php/admin-details.php");
                 </select>
               </div>
               <div class="mb-3">
-                <label for="jobDeadline" class="form-label">Job Deadline</label>
+                <label for="job-deadline" class="form-label">Job Deadline</label>
                 <input
                   type="date"
                   class="form-control"
@@ -307,6 +317,7 @@ include("./php/admin-details.php");
             <tr>
               <th scope="col">ID</th>
               <th scope="col">Company Name</th>
+              <th scope="col">Company Email</th>
               <th scope="col">Job Title</th>
               <th scope="col">Description</th>
               <th scope="col">Job Location</th>
@@ -325,8 +336,9 @@ include("./php/admin-details.php");
                   echo "<tr>";
                   echo "<td>" . $row['id'] . "</td>";
                   echo "<td>" . $row['company'] . "</td>";
+                  echo "<td>" . $row['email'] . "</td>";
                   echo "<td>" . $row['title'] . "</td>";
-                  echo "<td>" . $row['description'] . "</td>";
+                  echo "<td class='dboard-job-desc text-truncate'>" . $row['description'] . "</td>";
                   echo "<td>" . $row['location'] . "</td>";
                   echo "<td>" . $row['salary'] . "</td>";
                   echo "<td>" . $row['type'] . "</td>";

@@ -25,6 +25,10 @@
   white-space: nowrap;
 }
 
+.dboard-job-desc {
+  max-width: 350px;
+}
+
 .dashboard-action-btns {
   display: flex;
   gap: 1rem;
