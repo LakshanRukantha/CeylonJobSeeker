@@ -30,7 +30,7 @@ $isAdmin = isset($_SESSION['isAdmin']) ? $_SESSION['isAdmin'] : "";
                 <a
                   class="nav-link active"
                   aria-current="page"
-                  href="./index.html"
+                  href="../index.html"
                   >Home</a
                 >
               </li>
