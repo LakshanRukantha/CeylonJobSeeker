@@ -35,7 +35,7 @@ if(isset($_SESSION['username'])) {
   <body>
     <div class="form-wrapper">
       <form class="form login-form"
-        id="loginASAdminForm"
+        id="loginAsAdminForm"
         action="./php/admin_login_handler.php"
         method="post">
       <?php
@@ -78,8 +78,11 @@ if(isset($_SESSION['username'])) {
           <i class="fa-brands fa-google"></i>
           <span>Sign In with Google</span>
         </button>
+        <div id="signInAlertMessageArea" class="" role="alert"></div>
       </form>
     </div>
+    <!-- Custom JS -->
+    <script src="./js/sign-in.js"></script>
     <!-- Popper - CDN -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

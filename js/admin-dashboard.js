@@ -57,39 +57,12 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function postJobErrorMessage(message) {
-    jobPostAlertMessageArea.classList.add("alert", "alert-danger");
+    jobPostAlertMessageArea.classList.add(
+      "alert",
+      "alert-danger",
+      "mt-4",
+      "mb-0"
+    );
     jobPostAlertMessageArea.innerText = message;
   }
-
-  function addAdminErrorMessage(message) {
-    addAdminAlertMessageArea.classList.add("alert", "alert-danger");
-    addAdminAlertMessageArea.innerText = message;
-  }
-
-  // Add New Admin Form Validations
-
-  const addNewAdminForm = document.getElementById("addNewAdminForm");
-  const addAdminAlertMessageArea = document.getElementById(
-    "addAdminAlertMessageArea"
-  );
-
-  addNewAdminForm.addEventListener("submit", function (event) {
-    event.preventDefault();
-    const adminName = document.getElementById("adminName").value;
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
-
-    if (!adminName.trim()) {
-      addAdminErrorMessage("Admin name is required.");
-      return;
-    } else if (!username.trim()) {
-      addAdminErrorMessage("Username is required.");
-      return;
-    } else if (!password.trim()) {
-      addAdminErrorMessage("Password is required.");
-      return;
-    }
-
-    addNewAdminForm.submit();
-  });
 });

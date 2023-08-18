@@ -305,7 +305,7 @@ include("./php/admin-details.php");
                 />
               </div>
               <button type="submit" class="btn-primary w-100">Submit</button>
-              <div id="jobPostAlertMessageArea" class="mt-4" role="alert"></div>
+              <div id="jobPostAlertMessageArea" class="" role="alert"></div>
             </form>
             <!-- Section: New Job End -->
           </div>

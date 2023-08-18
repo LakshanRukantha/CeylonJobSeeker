@@ -55,7 +55,6 @@ if(isset($_SESSION['username'])) {
             id="fullName"
             name="fullName"
             placeholder="Enter Userame..."
-            required
           />
         </div>
         <div class="mb-3">
@@ -65,8 +64,9 @@ if(isset($_SESSION['username'])) {
             class="form-control"
             id="username"
             name="username"
+            autocomplete="username"
             placeholder="Enter Userame..."
-            required
+
           />
         </div>
         <div class="mb-3">
@@ -76,8 +76,8 @@ if(isset($_SESSION['username'])) {
             class="form-control"
             id="password"
             name="password"
+            autocomplete="new-password"
             placeholder="Enter Password..."
-            required
           />
         </div>
         <div class="mb-3">
@@ -89,8 +89,8 @@ if(isset($_SESSION['username'])) {
             class="form-control"
             id="confirmPassword"
             name="confirmPassword"
+            autocomplete="new-password"
             placeholder="Enter Password Again..."
-            required
           />
           <span class="sub-action-text"
             >Already have an account? <a href="admin-login.php">Sign In</a></span
@@ -100,8 +100,11 @@ if(isset($_SESSION['username'])) {
           <a class="btn btn-outline-secondary w-50" href="index.html">Cancel</a>
           <button class="btn-primary w-50" type="submit">Sign Up</button>
         </div>
+        <div id="signUpAlertMessageArea" class="" role="alert"></div>
       </form>
     </div>
+    <!-- Custom JS -->
+    <script src="./js/sign-up.js"></script>
     <!-- Popper - CDN -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
