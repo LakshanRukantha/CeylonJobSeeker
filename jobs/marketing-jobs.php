@@ -2,7 +2,8 @@
 
 include_once '../config/config.php';
 
-$sql = "SELECT * FROM jobs WHERE category_id=3";
+$sql = "SELECT * FROM jobs WHERE category_id=3 ORDER BY post_date DESC";
+
 $varshow = $conn->query($sql);
 
 session_start();
