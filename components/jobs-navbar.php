@@ -63,7 +63,7 @@ $isAdmin = isset($_SESSION['isAdmin']) ? $_SESSION['isAdmin'] : "";
               } else {
                   echo ("
                       <a href='../admin-register.php'>
-                          <button class='btn btn-primary' type='button'>
+                          <button class='btn btn-secondary' type='button'>
                               Sign Up
                           </button>
                       </a>
