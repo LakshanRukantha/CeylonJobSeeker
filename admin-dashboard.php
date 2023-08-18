@@ -327,7 +327,7 @@ include("./php/admin-details.php");
               <th scope="col">Action</th>
             </tr>
           </thead>
-          <tbody id="jobListTableBody">
+          <tbody id="jobListTableBody" class="table-group-divider">
             <?php
               $sql = "SELECT * FROM jobs";
               $result = mysqli_query($conn, $sql);
@@ -338,12 +338,12 @@ include("./php/admin-details.php");
                   echo "<td>" . $row['company'] . "</td>";
                   echo "<td>" . $row['email'] . "</td>";
                   echo "<td>" . $row['title'] . "</td>";
-                  echo "<td class='dboard-job-desc text-truncate'>" . $row['description'] . "</td>";
+                  echo "<td><span class='dboard-job-desc'>" . $row['description'] . "</span></td>";
                   echo "<td>" . $row['location'] . "</td>";
                   echo "<td>" . $row['salary'] . "</td>";
                   echo "<td>" . $row['type'] . "</td>";
                   echo "<td>" . $row['deadline'] . "</td>";
-                  echo "<td class='dashboard-action-btns'><a href='./php/delete_job.php?job_id=" . $row['id'] . "' class='btn btn-danger'><i class='fa-solid fa-trash'></i></a><a href='./php/update_job.php?job_id=" . $row['id'] . "' class='btn btn-secondary'><i class='fa-solid fa-pen-to-square'></i></a></td>";
+                  echo "<td><div class='dashboard-action-btns'><a href='./php/delete_job.php?job_id=" . $row['id'] . "' class='btn btn-danger'><i class='fa-solid fa-trash'></i></a><a href='./php/update_job.php?job_id=" . $row['id'] . "' class='btn btn-secondary'><i class='fa-solid fa-pen-to-square'></i></a></div></td>";
                   echo "</tr>";
                 }
               }

@@ -26,12 +26,16 @@
 }
 
 .dboard-job-desc {
-  max-width: 350px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  -webkit-box-orient: vertical;
 }
 
 .dashboard-action-btns {
   display: flex;
   gap: 1rem;
-  height: 65px;
   align-items: center;
 }
