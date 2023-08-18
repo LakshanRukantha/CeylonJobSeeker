@@ -94,7 +94,7 @@
 
               <div>
                 <br />
-                <button type="button" class="btn-primary">Send Message</button>
+                <button type="button" class="btn-primary d-inline-flex align-items-center gap-2"><i class="fa-regular fa-paper-plane"></i>Send Message</button>
               </div>
             </form>
 

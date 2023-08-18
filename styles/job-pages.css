@@ -98,9 +98,11 @@
   height: 100%;
   max-width: 45px;
   width: 100%;
-  padding: 0.5rem;
   border-radius: 100%;
-  background-color: var(--shadow-dark);
+  overflow: hidden;
+  font-size: 0.5rem;
+  background-color: var(--text-light-color);
+  border: 0.2rem solid var(--secondary-color-shade);
 }
 
 .bottom-content-wrapper {

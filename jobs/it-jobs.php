@@ -62,7 +62,7 @@ $isAdmin = isset($_SESSION['isAdmin']) ? $_SESSION['isAdmin'] : "";
             </div>
             <div class="company-image">
               <img
-                class="img-fluid"
+                class="img-fluid rounded-circle"
                 src="<?php echo $row["logo"]; ?>"
                 alt="Company Image"
               />
