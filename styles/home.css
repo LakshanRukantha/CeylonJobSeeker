@@ -134,6 +134,48 @@
 }
 /* Partners Section End */
 
+/* Reviews Section Start */
+.reviews-section {
+  display: flex;
+  margin: 2rem auto;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.review-card {
+  max-width: 320px;
+  width: 100%;
+  transition: box-shadow 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.review-card:hover {
+  transform: translateY(-0.2rem);
+  box-shadow: 0px 0px 10px 0px var(--shadow-dark);
+}
+
+.review-person-img {
+  max-width: 3rem;
+  max-height: 3rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 3px solid var(--secondary-color-shade);
+  overflow: hidden;
+}
+
+.review-text {
+  overflow: hidden;
+  margin-top: 0.5rem;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  line-clamp: 8;
+  min-height: 200px;
+  -webkit-box-orient: vertical;
+}
+/* Reviews Section End */
+
 @media screen and (min-width: 576px) {
   /* Hero Section Start */
   .hero-title {
