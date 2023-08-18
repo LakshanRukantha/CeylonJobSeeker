@@ -114,7 +114,7 @@
               <div class="card-text">
                 <p>Medical professionals provide healthcare, diagnose conditions, and conduct research to improve patient well-being.</p>
               </div>
-                <li>Registered Nurse</li>
+                <li>Nurse</li>
                 <li>Physician</li>
                 <li>Medical Assistant</li>
                 <li>Pharmacist</li>

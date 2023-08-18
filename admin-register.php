@@ -10,6 +10,8 @@ unset($_SESSION['toastMessage']);
 unset($_SESSION['toastClass']);
 
 if(isset($_SESSION['username'])) {
+  $_SESSION['toastMessage'] = "Please sign out before making a new account!";
+  $_SESSION['toastClass'] = "alert alert-info mb-4";
   header("Location: ./admin-dashboard.php");
 }
 
@@ -29,7 +31,7 @@ if(isset($_SESSION['username'])) {
     />
     <link rel="stylesheet" href="./styles/main.css" />
     <link rel="stylesheet" href="./styles/admin-panel.css" />
-    <title>Admin Login</title>
+    <title>Sign In</title>
   </head>
   <body>
     <div class="form-wrapper">
@@ -44,7 +46,7 @@ if(isset($_SESSION['username'])) {
           $toastMessage
           </div>");
         ?>
-        <h2 class="section-title form-title">Register As <span>Admin</span></h2>
+        <h2 class="section-title form-title">Admin <span>Sign Up</span></h2>
         <div class="mb-3">
           <label for="fullName" class="form-label">Full Name</label>
           <input
@@ -91,12 +93,12 @@ if(isset($_SESSION['username'])) {
             required
           />
           <span class="sub-action-text"
-            >Already have an account? <a href="admin-login.php">Login</a></span
+            >Already have an account? <a href="admin-login.php">Sign In</a></span
           >
         </div>
         <div class="d-flex gap-3">
           <a class="btn btn-outline-secondary w-50" href="index.html">Cancel</a>
-          <button class="btn-primary w-50" type="submit">Register</button>
+          <button class="btn-primary w-50" type="submit">Sign Up</button>
         </div>
       </form>
     </div>

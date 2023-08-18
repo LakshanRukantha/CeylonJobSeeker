@@ -10,8 +10,8 @@ unset($_SESSION['toastMessage']);
 unset($_SESSION['toastClass']);
 
 if(isset($_SESSION['username'])) {
-  $_SESSION['toastMessage'] = "You are already logged in!";
-  $_SESSION['toastClass'] = "alert alert-danger mb-4";
+  $_SESSION['toastMessage'] = "You're already signed in!";
+  $_SESSION['toastClass'] = "alert alert-info mb-4";
   header("Location: ./admin-dashboard.php");
 }
 ?>
@@ -30,7 +30,7 @@ if(isset($_SESSION['username'])) {
     />
     <link rel="stylesheet" href="./styles/main.css" />
     <link rel="stylesheet" href="./styles/admin-panel.css" />
-    <title>Admin Login</title>
+    <title>Sign In</title>
   </head>
   <body>
     <div class="form-wrapper">
@@ -66,17 +66,17 @@ if(isset($_SESSION['username'])) {
           />
           <span class="sub-action-text"
             >Don't have an account?
-            <a href="admin-register.php">Register</a></span
+            <a href="admin-register.php">Sign Up</a></span
           >
         </div>
         <div class="d-flex gap-3">
           <a class="btn btn-outline-secondary w-50" href="index.html">Cancel</a>
-          <button class="btn-primary w-50" type="submit">Login</button>
+          <button class="btn-primary w-50" type="submit">Sign In</button>
         </div>
         <span class="secondary-action-text">- Or -</span>
         <button class="btn btn-secondary w-100 icon-button" type="button">
           <i class="fa-brands fa-google"></i>
-          <span>Login with Google</span>
+          <span>Sign In with Google</span>
         </button>
       </form>
     </div>
