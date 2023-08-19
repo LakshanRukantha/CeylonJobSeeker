@@ -159,7 +159,7 @@ $isAdmin = isset($_SESSION['isAdmin']) ? $_SESSION['isAdmin'] : "";
             >
             <div class="site-info">
               <span
-                >Designed and developed by Software Engineering
+                >Designed and developed by Computing
                 Undergraduates</span
               >
               <span

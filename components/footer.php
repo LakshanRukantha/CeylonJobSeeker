@@ -10,7 +10,7 @@
       >
       <div class="site-info">
         <span
-          >Designed and developed by Software Engineering Undergraduates</span
+          >Designed and developed by Computing Undergraduates</span
         >
         <span
           ><a rel="noopener" href="https://nsbm.ac.lk" target="_blank"
