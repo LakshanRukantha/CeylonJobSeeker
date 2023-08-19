@@ -39,7 +39,7 @@
                 <li>Data Scientist</li>
                 <li>Network Engineer</li>
             </div>
-              <a href="jobs/it-jobs.php" class="btn btn-primary">Explore jobs</a> 
+              <a href="jobs/it-jobs.php" class="btn btn-primary">Explore Jobs</a> 
           </div>
           <div class="card col-md-4 col-lg-12 border"> 
             <div class="icon">
@@ -55,7 +55,7 @@
                 <li>Bookkeeper</li>
                 <li>Auditor</li>
             </div>
-              <a href="jobs/accounting-jobs.php" class="btn btn-primary">Explore jobs</a> 
+              <a href="jobs/accounting-jobs.php" class="btn btn-primary">Explore Jobs</a> 
           </div>
           <div class="card col-md-4 col-lg-12 border"> 
             <div class="icon">
@@ -71,7 +71,7 @@
                 <li>Advertising Coordinator</li>
                 <li>Brand Manager</li>
             </div>
-              <a href="jobs/marketing-jobs.php" class="btn btn-primary">Explore jobs</a> 
+              <a href="jobs/marketing-jobs.php" class="btn btn-primary">Explore Jobs</a> 
           </div>
           <div class="card col-md-4 col-lg-12 border"> 
             <div class="icon">
@@ -87,7 +87,7 @@
                 <li>Civil Engineer</li>
                 <li>Chemical Engineer</li> 
             </div>
-              <a href="jobs/engineering-jobs.php" class="btn btn-primary">Explore jobs</a> 
+              <a href="jobs/engineering-jobs.php" class="btn btn-primary">Explore Jobs</a> 
           </div>
           <div class="card col-md-4 col-lg-12 border"> 
             <div class="icon">
@@ -103,7 +103,7 @@
                 <li>Tutor</li>
                 <li>Education Administrator</li>
             </div>
-              <a href="jobs/teaching-jobs.php" class="btn btn-primary">Explore jobs</a> 
+              <a href="jobs/teaching-jobs.php" class="btn btn-primary">Explore Jobs</a> 
           </div>
           <div class="card col-md-4 col-lg-12 border"> 
             <div class="icon">
@@ -119,7 +119,7 @@
                 <li>Medical Assistant</li>
                 <li>Pharmacist</li>
             </div>
-              <a href="jobs/medical-jobs.php" class="btn btn-primary">Explore jobs</a> 
+              <a href="jobs/medical-jobs.php" class="btn btn-primary">Explore Jobs</a> 
           </div>
           <div class="card col-md-4 col-lg-12 border"> 
             <div class="icon">
@@ -135,7 +135,7 @@
                 <li>Lawyer</li>
                 <li>Travel Agent</li>
             </div>
-              <a href="jobs/other-jobs.php" class="btn btn-primary">Explore jobs</a> 
+              <a href="jobs/other-jobs.php" class="btn btn-primary">Explore Jobs</a> 
           </div>  
         </div>
         <!-- cards section end -->
