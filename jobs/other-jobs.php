@@ -84,7 +84,7 @@ $isAdmin = isset($_SESSION['isAdmin']) ? $_SESSION['isAdmin'] : "";
           </div>
         </div>
         <div class="job-footer-wrapper">
-          <h5 class="salary"><span>$</span><?php echo $row["salary"]; ?><span>/Mo</span></h5>
+          <h5 class="salary"><span>$</span><?php echo $row["salary"]; ?><span> Per Month</span></h5>
            <!-- Button trigger modal -->
            <button type="button" class="btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop<?php echo $row["id"]; ?>">Details</button>
 

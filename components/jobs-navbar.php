@@ -7,7 +7,7 @@ $isAdmin = isset($_SESSION['isAdmin']) ? $_SESSION['isAdmin'] : "";
       <!-- Navbar Start -->
       <nav class="navbar navbar-expand-lg fixed-top w-full bg-body-tertiary">
         <div class="container-fluid px-lg-4">
-          <a class="navbar-brand" href="index.html"
+          <a class="navbar-brand" href="../index.html"
             ><img
               class="img-logo"
               src="../assets/images/logo.svg"
