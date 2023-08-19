@@ -6,8 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
     "signInAlertMessageArea"
   );
 
-  console.log(signInForm);
-
   signInForm.addEventListener("submit", function (event) {
     event.preventDefault();
 

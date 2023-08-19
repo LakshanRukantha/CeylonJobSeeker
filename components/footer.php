@@ -24,19 +24,19 @@
       <h6>Quick Links</h6>
       <ul>
         <li>
-          <a href="#">Home</a>
+          <a href="../index.html">Home</a>
         </li>
         <li>
-          <a href="#">Categories</a>
+          <a href="../categories.php">Categories</a>
         </li>
         <li>
-          <a href="#">FAQ</a>
+          <a href="../faq.php">FAQ</a>
         </li>
         <li>
-          <a href="#">Contact Us</a>
+          <a href="../contact.php">Contact Us</a>
         </li>
         <li>
-          <a href="#">About Us</a>
+          <a href="../about.php">About Us</a>
         </li>
       </ul>
     </div>
@@ -44,7 +44,7 @@
       <h6>Support</h6>
       <ul>
         <li>
-          <a href="#">FAQ</a>
+          <a href="../faq.php">FAQ</a>
         </li>
         <li>
           <a href="#">Privacy Policy</a>
