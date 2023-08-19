@@ -72,17 +72,24 @@
 }
 
 .job-details-left {
-  max-width: 250px;
+  max-width: 190px;
 }
 
 .company {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
 .job-title {
   color: var(--text-primary-color);
   overflow: hidden;
+  font-size: 1.2rem;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -118,8 +125,8 @@
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
   -webkit-box-orient: vertical;
   margin-top: 0.5rem;
   margin-bottom: 0;
