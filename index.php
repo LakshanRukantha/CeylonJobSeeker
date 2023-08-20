@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO -->
+    <meta name="description" content="CeylonJobSeeker is your premier job portal for Sri Lanka and worldwide opportunities. Explore a diverse range of job listings and embark on your career journey with us. Our commitment is to deliver the ultimate user experience for job seekers." />
+    <meta name="keywords" content="CeylonJobSeeker, Ceylon, Job, Seeker, Sri Lanka, Job Portal, Job Seeker, Job Seeker Sri Lanka, Job Portal Sri Lanka, Global Jobs" />
+    <!-- Open Graph Info -->
+    <meta property="og:title" content="CeylonJobSeeker" />
+    <meta property="og:description" content="CeylonJobSeeker is your premier job portal for Sri Lanka and worldwide opportunities. Explore a diverse range of job listings and embark on your career journey with us. Our commitment is to deliver the ultimate user experience for job seekers." />
+    <meta property="og:image" content="./assets/images/logo.svg" />
     <!-- Favicon -->
     <link
       rel="apple-touch-icon"
@@ -35,61 +42,7 @@
   </head>
   <body>
     <div class="main-wrapper">
-      <!-- Navbar Start -->
-      <nav class="navbar navbar-expand-lg fixed-top w-full bg-body-tertiary">
-        <div class="container-fluid px-lg-4">
-          <a class="navbar-brand" href="index.html"
-            ><img
-              class="img-logo"
-              src="./assets/images/logo.svg"
-              alt="CJS Logo"
-          /></a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="./index.html"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="categories.php">Categories</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="faq.php">FAQ</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.php">Contact Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.php">About Us</a>
-              </li>
-            </ul>
-            <a href="admin-register.php">
-              <button class="btn btn-secondary" type="button">Sign Up</button>
-            </a>
-            <a class="mx-1" href="admin-login.php">
-              <button class="btn btn-outline-primary" type="button">
-                Sign In
-              </button>
-            </a>
-          </div>
-        </div>
-      </nav>
-      <!-- Navbar End -->
+    <?php include_once "./components/navbar.php"; ?>
       <div class="container">
         <!-- Hero Section Start -->
         <div class="row landing-section">
@@ -202,8 +155,6 @@
           </div>
         </div>
         <!-- Parttners Section End -->
-        <!-- How It Works Section Start -->
-        <!-- How It Works Section End -->
         <!-- Reviews Section Start -->
         <div class="reviews-wrapper mt-5">
           <h2 class="section-title">Job Seeker <span>Experiences</span></h2>
@@ -281,92 +232,64 @@
           </div>
         </div>
         <!-- Reviews Section End -->
+        <!-- Newsletter Section Start -->
+        <div class="newsletter-wrapper mt-5">
+          <h2 class="section-title">
+            Subscribe to our <span>Newsletter</span>
+          </h2>
+          <div class="row mt-4">
+            <div class="d-flex col-12 col-md-4">
+              <img
+                class="img-fluid newsletter-image"
+                src="./assets/images/home/newsletter.svg"
+                alt="Newsletter Image"
+              />
+            </div>
+            <div class="col-12 col-md-8 mt-3 mt-md-0">
+              <p class="newsletter-text">
+                Don't miss out on the latest updates, job opportunities, and
+                exclusive offers. Subscribe to our newsletter today and let us
+                keep you informed and inspired on your journey towards a
+                successful career.
+              </p>
+              <ul class="newsletter-items list-unstyled">
+                <li>
+                  <i class="fa-solid fa-circle-notch"></i>Get the latest job
+                  listings
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-notch"></i>Receive exclusive
+                  offers
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-notch"></i>Stay up-to-date with
+                  our newsletter
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-notch"></i>Get inspired with our
+                  career advice
+                </li>
+              </ul>
+              <form action="" class="input-group mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter email..."
+                  aria-label="newsletter-email"
+                  aria-describedby="Email"
+                />
+                <button class="btn btn-primary" type="submit" id="Email">
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- Newsletter Section End -->
       </div>
-
-      <!-- Footer Start -->
-      <footer id="bottom" class="w-100">
-        <div class="footer">
-          <div class="footer-section flex-grow-1 mb-3">
-            <a class="brand-text" href="index.html"
-              ><img
-                class="img-logo"
-                src="./assets/images/logo-light.svg"
-                alt="CJS Logo"
-              />CeylonJobSeeker</a
-            >
-            <div class="site-info">
-              <span>Designed and developed by Computing Undergraduates</span>
-              <span
-                ><a rel="noopener" href="https://nsbm.ac.lk" target="_blank"
-                  >NSBM Green University</a
-                ></span
-              >
-            </div>
-          </div>
-
-          <div class="footer-section flex-grow-1">
-            <h6>Quick Links</h6>
-            <ul>
-              <li>
-                <a href="#">Home</a>
-              </li>
-              <li>
-                <a href="#">Categories</a>
-              </li>
-              <li>
-                <a href="#">FAQ</a>
-              </li>
-              <li>
-                <a href="#">Contact Us</a>
-              </li>
-              <li>
-                <a href="#">About Us</a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer-section flex-grow-1">
-            <h6>Support</h6>
-            <ul>
-              <li>
-                <a href="#">FAQ</a>
-              </li>
-              <li>
-                <a href="#">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="#">Customer Support</a>
-              </li>
-              <li>
-                <a href="#">Terms of Service</a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer-section flex-grow-1">
-            <h6>Social</h6>
-            <div class="social-icon-links">
-              <a href="#" title="LinkedIn">
-                <i class="fa-brands fa-linkedin-in"></i>
-              </a>
-              <a href="#" title="Facebook">
-                <i class="fa-brands fa-facebook-f"></i>
-              </a>
-              <a href="#" title="GitHub">
-                <i class="fa-brands fa-github"></i>
-              </a>
-              <a href="#" title="Twitter">
-                <i class="fa-brands fa-twitter"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <hr class="w-100 divider" height="2" />
-        <div class="footer-end">
-          <span>Copyright &copy; 2023 | All rights reserved.</span>
-
-          <span>Cookies</span>
-        </div>
-      </footer>
-      <!-- Footer End -->
+    <!-- Footer Start -->
+    <?php include_once('./components/footer.php'); ?>
+    <!-- Footer End -->
     </div>
     <!-- Popper - CDN -->
     <script

@@ -68,7 +68,7 @@ include("./php/admin-details.php");
       <!-- Navbar Start -->
       <nav class="navbar navbar-expand-lg fixed-top w-full bg-body-tertiary">
         <div class="container-fluid px-lg-4">
-          <a class="navbar-brand" href="index.html"
+          <a class="navbar-brand" href="index.php"
             ><img
               class="img-logo"
               src="./assets/images/logo.svg"
@@ -91,7 +91,7 @@ include("./php/admin-details.php");
                 <a
                   class="nav-link active"
                   aria-current="page"
-                  href="./index.html"
+                  href="./index.php"
                   >Home</a
                 >
               </li>

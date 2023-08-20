@@ -1,7 +1,7 @@
 <footer id="bottom" class="w-100">
   <div class="footer">
     <div class="footer-section flex-grow-1 mb-3">
-      <a class="brand-text" href="index.html"
+      <a class="brand-text" href="index.php"
         ><img
           class="img-logo"
           src="./assets/images/logo-light.svg"
@@ -24,7 +24,7 @@
       <h6>Quick Links</h6>
       <ul>
         <li>
-          <a href="../index.html">Home</a>
+          <a href="../index.php">Home</a>
         </li>
         <li>
           <a href="../categories.php">Categories</a>

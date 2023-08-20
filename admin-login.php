@@ -89,7 +89,7 @@ if(isset($_SESSION['username'])) {
           >
         </div>
         <div class="d-flex gap-3">
-          <a class="btn btn-outline-secondary w-50" href="index.html">Cancel</a>
+          <a class="btn btn-outline-secondary w-50" href="index.php">Cancel</a>
           <button class="btn-primary w-50" type="submit">Sign In</button>
         </div>
         <span class="secondary-action-text">- Or -</span>

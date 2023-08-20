@@ -176,6 +176,20 @@
 }
 /* Reviews Section End */
 
+/* Newsletter Section Start */
+
+.newsletter-image {
+  width: 100%;
+  max-width: 350px;
+}
+
+.newsletter-items li i {
+  margin-right: 0.5rem;
+  color: var(--secondary-color);
+}
+
+/* Newsletter Section End */
+
 @media screen and (min-width: 576px) {
   /* Hero Section Start */
   .hero-title {
