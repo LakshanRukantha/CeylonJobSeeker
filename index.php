@@ -235,7 +235,7 @@
         <!-- Newsletter Section Start -->
         <div class="newsletter-wrapper mt-5">
           <h2 class="section-title">
-            Subscribe to our <span>Newsletter</span>
+            Subscribe To Our <span>Newsletter</span>
           </h2>
           <div class="row mt-4">
             <div class="d-flex col-12 col-md-4">
