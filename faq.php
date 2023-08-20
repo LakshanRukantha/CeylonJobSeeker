@@ -38,7 +38,7 @@
     <?php include_once "./components/navbar.php"; ?>
      <div class="container faq-section mt-4">
         <div class="faq-section-left">
-          <h2 class="section-title">Frequently asked <span>questions</span></h2>
+          <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
           <p>Questions you might ask about our Services.</p>
           <img
             class="img-fluid"
