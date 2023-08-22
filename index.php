@@ -6,6 +6,7 @@
     <!-- SEO -->
     <meta name="description" content="CeylonJobSeeker is your premier job portal for Sri Lanka and worldwide opportunities. Explore a diverse range of job listings and embark on your career journey with us. Our commitment is to deliver the ultimate user experience for job seekers." />
     <meta name="keywords" content="CeylonJobSeeker, Ceylon, Job, Seeker, Sri Lanka, Job Portal, Job Seeker, Job Seeker Sri Lanka, Job Portal Sri Lanka, Global Jobs" />
+    <meta name="robots" content="index, follow" />
     <!-- Open Graph Info -->
     <meta property="og:title" content="CeylonJobSeeker" />
     <meta property="og:description" content="CeylonJobSeeker is your premier job portal for Sri Lanka and worldwide opportunities. Explore a diverse range of job listings and embark on your career journey with us. Our commitment is to deliver the ultimate user experience for job seekers." />

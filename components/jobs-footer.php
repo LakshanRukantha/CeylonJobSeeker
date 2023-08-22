@@ -4,7 +4,7 @@
       <a class="brand-text" href="index.php"
         ><img
           class="img-logo"
-          src="./assets/images/logo-light.svg"
+          src="../assets/images/logo-light.svg"
           alt="CJS Logo"
         />CeylonJobSeeker</a
       >
@@ -24,19 +24,19 @@
       <h6>Quick Links</h6>
       <ul>
         <li>
-          <a href="./index.php">Home</a>
+          <a href="../index.php">Home</a>
         </li>
         <li>
-          <a href="./categories.php">Categories</a>
+          <a href="../categories.php">Categories</a>
         </li>
         <li>
-          <a href="./faq.php">FAQ</a>
+          <a href="../faq.php">FAQ</a>
         </li>
         <li>
-          <a href="./contact.php">Contact Us</a>
+          <a href="../contact.php">Contact Us</a>
         </li>
         <li>
-          <a href="./about.php">About Us</a>
+          <a href="../about.php">About Us</a>
         </li>
       </ul>
     </div>
