@@ -1,0 +1,41 @@
+.section-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 2rem auto;
+}
+
+.form {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.job-listing-dashboard,
+.admins-list {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table-striped th {
+  white-space: nowrap;
+}
+
+.dboard-job-desc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+
+.dashboard-action-btns {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
